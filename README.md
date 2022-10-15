@@ -7,6 +7,12 @@
   * A broadcasting server is establised to forward the keystroke from a web browser to the Pi. 
   * A keyboard webpage feeds the broadcasting server with the keystroke.
   * The Pi ZW receives the keystroke and sends it to Xiao via I2C.
+### Features
+* Control a remote machine through a web browser 
+* Can be used to install operating system.
+* Hardware-based, no need to install software on the remote machine.
+* Basic authentication
+* SSL encrypted communication
 ### Pics
 * Keyboard Emulator (Pi-Xiao Couple)</br>
 <img src="misc/pi_xiao.jpg" style="height:300px; width:320px"></img></br>
