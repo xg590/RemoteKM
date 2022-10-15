@@ -671,9 +671,16 @@
 				 function_case_switch();
             }
 
-			let socket = new WebSocket("ws://192.168.12.238:8765");
+			
+			var username = "hello";
+    		var password = "iloveyou";
+    		var hostname = "guoxiaokang.com";
+			let socket = new WebSocket("wss://"+username+":"+password+"@"+hostname+":8765"); // ws://guoxiaokang:8765
+			//let socket = new WebSocket("wss://{username}:{password}@{hostname}:8765"); // ws://guoxiaokang:8765
 			socket.onopen = function(e) {
-			  // socket.send("I am Joe");
+			  socket.send(JSON.stringify({ 
+						"greeting": "virtual_keyboard"
+					}));
 			};
 			socket.onclose = function(event) {
 			  if (event.wasClean) {
@@ -686,8 +693,12 @@
 			socket.onerror = function(error) {
 			  alert(`[error] ${error.message}`);
 			};
+			var incoming_msg;
 			socket.onmessage = function(event) {
-			  ; // alert(`[incoming msg] : ${event.data}`);
+				incoming_msg = JSON.parse(event.data); 
+				if (Object.keys(incoming_msg).indexOf("greeting")!=-1) {
+					alert(incoming_msg["greeting"]);
+				}
 			};
             document.querySelectorAll('.key').forEach(ele => {
                 ele.addEventListener("click", ()=> {
@@ -731,11 +742,11 @@
 					  	func_shift();
 					    break;
 					  default:
-					    ;// code block
+					    ; 
 					}
                     console.log(ele.getAttribute("value"), ele.getAttribute("value_type"));
-					socket.send(JSON.stringify({
-						"device": "keyboard",
+					socket.send(JSON.stringify({ 
+						"device_type": "virtual_keyboard",
 						"value": ele.getAttribute("value"),
 						"value_type": ele.getAttribute("value_type")
 					}));
