@@ -144,8 +144,8 @@
         </style> 
 	<script src="https://d3js.org/d3.v4.min.js"></script>
     </head>
-    <body>
-		<!--<div class="row" id="keyboard-plus-mouse"> 
+    <body> 
+		<div class="row" id="keyboard-plus-mouse"> 
 			<div class="keyboard">
 				<div class="keyboard-main">
 					<div id="row-esc" class="row" style="margin-bottom:1em;">
@@ -636,185 +636,93 @@
 						</div>
 					</div>
 				</div> 
-			</div>
-		</div>-->
+			</div> 
 			<div class="mouse"> 
-				<svg width="300" height="300"  style="border: 1px dashed black">  	<circle cx="150" cy="150" r="140" style="fill:none;stroke:#FF7F7F;stroke-width:16px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;z-index: 1;"/> 
+				<svg width="300" height="300"  style="border: 1px dashed black">  	
+					<circle cx="150" cy="150" r="140" style="fill:none;stroke:#FF7F7F;stroke-width:16px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;z-index: 1;"/> 
 					<g transform="translate(126 ,115) scale(1 1)"> 	  
 						<path style="fill:rgb(0, 0, 0)"  d="M 39.710313,148.97269 C 28.327149,147.69288 17.462708,141.44664 10.55227,132.20902 6.8480978,127.25741 4.0924009,121.22018 2.9480354,115.54953 1.9874711,110.78967 2.0110486,111.80938 2.0110486,75.025468 2.0110486,42.541848 2.0358062,40.028012 2.3773,37.837033 3.8922803,28.117127 7.8452533,20.230747 14.568426,13.515123 21.38484,6.7063639 30.079474,2.4755187 39.510542,1.378186 c 3.882671,-0.45176054 17.358742,-0.45176054 21.241416,0 9.414675,1.0954255 18.142063,5.342401 24.940984,12.136937 6.559264,6.555032 10.701491,14.735025 12.057569,23.811082 0.381067,2.550418 0.396928,4.053553 0.397829,37.704624 5.79e-4,23.277925 -0.0712,35.629791 -0.213878,36.779771 -0.580244,4.67676 -1.90286,9.14106 -3.963558,13.37839 -6.438242,13.23871 -19.131858,22.20969 -33.666083,23.79288 -2.319475,0.25266 -18.32908,0.24552 -20.594508,-0.009 z m 19.77718,-5.50778 c 8.766848,-0.95497 16.260192,-4.53169 22.426264,-10.70451 5.306704,-5.31252 8.760801,-11.90338 10.232465,-19.52484 0.348325,-1.8039 0.379208,-3.67128 0.436774,-26.409914 l 0.06194,-24.468764 H 50.130558 7.6161763 l 0.066607,24.673096 0.066608,24.673102 0.5474359,2.46618 c 1.7976148,8.09821 5.8187338,15.00881 11.7891568,20.26058 5.578042,4.90662 12.578218,8.06872 19.798526,8.94334 2.725861,0.33019 16.80883,0.39609 19.602983,0.0917 z M 92.632317,48.814523 c 0,-9.569154 -0.295567,-12.29557 -1.838171,-16.955941 -0.77851,-2.351968 -2.903574,-6.6975 -4.282791,-8.757868 C 80.245912,13.74097 70.322728,7.8523168 59.019693,6.7865102 56.100556,6.5112535 44.166713,6.5138257 41.140638,6.7903647 25.606447,8.209959 12.674864,19.190481 8.7508046,34.293362 7.7965416,37.96612 7.6301802,40.100935 7.6301802,48.673658 v 7.961927 H 50.13125 92.632317 Z" />
                         <path id="mouse-key-left"   r="10" style="fill:rgba(89, 0, 255, 0.849)" transform="translate(0,0)" d="M 7.8431578,47.491725 C 7.9301107,39.048633 7.9716034,38.191269 8.3845658,36.304542 11.650263,21.384377 22.807315,10.384496 37.722352,7.3800447 39.521859,7.0175562 40.917224,6.9077202 44.720726,6.8291687 l 4.750719,-0.098114 v 5.4385533 5.438552 h -1.407039 c -1.30427,0 -1.497574,0.06045 -2.646523,0.827696 -1.255224,0.838204 -2.240687,1.99534 -3.123483,3.667609 l -0.485405,0.919495 v 8.581945 8.581947 l 0.579103,1.099877 c 0.761583,1.446452 2.170574,2.929869 3.618057,3.809169 0.967346,0.587632 1.366933,0.710088 2.317109,0.710088 h 1.148181 v 5.414798 5.414801 H 28.610217 7.7489881 Z" />
                         <path id="mouse-key-middle" y="10" style="fill:rgba(0, 255, 85, 0.849)" transform="translate(0,0)" d="m 46.257915,45.134296 c -1.34153,-0.703534 -3.011631,-2.376213 -3.645647,-3.651274 -0.893193,-1.796284 -0.905616,-1.931377 -0.905616,-9.848196 0,-4.653086 0.05588,-7.45669 0.158495,-7.952416 0.441722,-2.133851 2.227019,-4.499447 4.163779,-5.517185 l 0.993671,-0.522158 h 3.034496 3.034497 l 0.83929,0.441492 c 1.831438,0.963392 3.32614,2.714758 4.065612,4.763743 l 0.389714,1.079844 0.04913,7.064763 c 0.04239,6.095483 0.0168,7.224383 -0.186609,8.228181 -0.547422,2.70163 -2.372248,5.021473 -4.806825,6.110753 -0.715121,0.319962 -0.931289,0.340972 -3.46763,0.337045 l -2.704967,-0.0042 z" />
                         <path id="mouse-key-right"         style="fill:rgba(255, 0, 0, 0.849)" d="m 50.493105,51.248759 v -5.386824 l 1.304933,-0.104746 c 2.424705,-0.194634 4.638848,-1.919637 5.91106,-4.605209 l 0.650793,-1.37379 V 31.502739 23.227292 L 57.788725,22.06419 C 57.08317,20.627423 55.715748,19.081246 54.409121,18.242785 53.53827,17.683962 53.245336,17.60816 51.956626,17.60816 H 50.493105 V 12.169916 6.7316716 l 4.852888,0.1015494 c 5.068518,0.1060616 6.616155,0.2989013 10.135662,1.2629303 9.343658,2.5593217 17.477928,8.8539297 22.122812,17.1194737 2.443685,4.348525 4.066197,9.050926 4.566386,13.234406 0.127647,1.067633 0.28667,5.596143 0.353381,10.063354 l 0.121288,8.1222 H 71.569314 50.493105 Z"/>
-					</g>  
-					<g id="mouse-svg">
-  					</g> 
+					</g>
 				</svg> 
-			</div>  
-	    <script type="text/javascript"> 
-			function makeDraggable(evt) {
-			  var svg = evt.target;
-			
-			  svg.addEventListener('mousedown', startDrag);
-			  svg.addEventListener('mousemove', drag);
-			  svg.addEventListener('mouseup', endDrag);
-			  svg.addEventListener('mouseleave', endDrag);
-			  svg.addEventListener('touchstart', startDrag);
-			  svg.addEventListener('touchmove', drag);
-			  svg.addEventListener('touchend', endDrag);
-			  svg.addEventListener('touchleave', endDrag);
-			  svg.addEventListener('touchcancel', endDrag);
-			
-			  var selectedElement, offset, transform,
-				  bbox, minX, maxX, minY, maxY, confined; 
-			
-			  function getMousePosition(evt) {
-				var CTM = svg.getScreenCTM();
-				if (evt.touches) { evt = evt.touches[0]; }
-				return {
-				  x: (evt.clientX - CTM.e) / CTM.a,
-				  y: (evt.clientY - CTM.f) / CTM.d
-				};
-			  }
-		  
-			  function startDrag(evt) {
-				if (evt.target.classList.contains('draggable')) {
-				  selectedElement = evt.target;
-				  offset = getMousePosition(evt); 
-				  var transforms = selectedElement.transform.baseVal;  
-				  translate = transforms.getItem(0);
-				  offset.x -= translate.matrix.e;
-				  offset.y -= translate.matrix.f; 
+			</div> 
+		</div> 
+
+			<script type="text/javascript">
+				function makeMouseLeftKeyDraggable() {   
+					var originalX, originalY, currentX, currentY;
+					const element = document.getElementById("mouse-key-left"); 
+  
+					function dragStart (evt) { 
+						console.log("left-start")
+						originalX = evt.clientX;
+						originalY = evt.clientY;   
+						element.addEventListener('mousemove', dragging); 
+						element.addEventListener("mouseleave", dragStop);
+						element.addEventListener("mouseup", dragStop);
+						document.getElementById("mouse-key-middle").style.display = "none";
+						document.getElementById("mouse-key-right").style.display = "none"; 
+					} 
+					function dragging (evt) { 
+						console.log("left-ing")
+						var dx = evt.clientX-originalX;
+						var dy = evt.clientY-originalY;
+						element.transform.baseVal.getItem(0).setTranslate(dx,dy); 
+					} 
+					function dragStop () {
+						console.log("left-stop")
+						element.transform.baseVal.getItem(0).setTranslate(0,0); 
+						element.removeEventListener("mousemove", dragging)	
+						element.removeEventListener("mouseleave", dragStop);
+						element.removeEventListener("mouseup", dragStop);
+						document.getElementById("mouse-key-middle").style.display = "initial";
+						document.getElementById("mouse-key-right").style.display = "initial";
+					}
+					element.addEventListener("mousedown", dragStart);   
+					// if (evt.touches) { evt = evt.touches[0]; }  
+					//addEventListener('touchstart', startDrag);
+					//addEventListener('touchmove', drag);
+					//addEventListener('touchend', endDrag);
+					//addEventListener('touchleave', endDrag);
+					//addEventListener('touchcancel', endDrag);   
 				}
-			  }
-		  
-			  function drag(evt) { 
-				  evt.preventDefault(); 
-				  var coord = getMousePosition(evt);
-				  var dx = coord.x - offset.x;
-				  var dy = coord.y - offset.y; 
-				  if (confined) {
-					  if (dx < minX) { 
-						dx = minX; 
-					} else if (dx > maxX) { 
-						dx = maxX; 
+				makeMouseLeftKeyDraggable()  
+				
+				function makeMouseMiddleKeyDraggable() {  
+
+
+					var originalY, currentY;
+					const element = document.getElementById("mouse-key-middle"); 
+  
+					function dragStart (evt) {  
+						console.log("middle-start")
+						originalY = evt.clientY;   
+						element.addEventListener('mousemove', dragging); 
+						element.addEventListener("mouseleave", dragStop);
+						element.addEventListener("mouseup", dragStop); 
+						document.getElementById("mouse-key-left").style.display = "none";
+						document.getElementById("mouse-key-right").style.display = "none"; 
+					} 
+					function dragging (evt) {  
+						console.log("middle-ing")
+						var dy = evt.clientY-originalY;
+						element.transform.baseVal.getItem(0).setTranslate(0,dy); 
+					} 
+					function dragStop () {
+						console.log("middle-stop")
+						element.transform.baseVal.getItem(0).setTranslate(0,0); 
+						element.removeEventListener("mousemove", dragging)	
+						element.removeEventListener("mouseleave", dragStop);
+						element.removeEventListener("mouseup", dragStop); 
+						document.getElementById("mouse-key-left").style.display = "initial";
+						document.getElementById("mouse-key-right").style.display = "initial";
 					}
-					  if (dy < minY) { 
-						dy = minY; 
-					} else if (dy > maxY) { 
-						dy = maxY; 
-					}
-				  } 
-				  transform.setTranslate(dx, dy); 
-			  }
-		  
-			  function endDrag(evt) {
-				selectedElement = false;
-			  }
-			} 
-		</script>
-
-
-
-		<p id="p1" draggable="true">This element is draggable.</p>
-		<script> // <g transform="translate(126 ,115) scale(1 1)"> 	 
-			function makeMouseLeftKeyDraggable() {  
-				console.log("makeMouseLeftKeyDraggable1"); 
-			    const element = document.getElementById("mouse1-key-left"); 
-			    element.addEventListener("mousedown" , (evt)=> {
-					console.log("dragStart1");  
-    				var dragX = evt.clientX;
-    				var dragY = evt.clientY;
-					console.log(dragX);
-				});
-			    //element.addEventListener("mousemove" , ()=> {
-				//	console.log("dragging"); 
-				//});
-			    element.addEventListener("mouseup"   , ()=> {
-					console.log("dragStop"); 
-				});
-			    // element.addEventListener("mouseleave", ()=> {
-				// 	console.log("makeMouseLeftKeyDraggable5"); 
-				// });
-			}
-			makeMouseLeftKeyDraggable()
-			function makeMouseMiddleKeyDraggable() {  
-			    const element = document.getElementById("mouse-key-middle"); 
-			    element.addEventListener("mousedown" , ()=> {
-					console.log("dragStart2"); 
-				});
-			    //element.addEventListener("mousemove" , ()=> {
-				//	console.log("dragging"); 
-				//});
-			    element.addEventListener("mouseup"   , ()=> {
-					console.log("dragStop"); 
-				});
-			    // element.addEventListener("mouseleave", ()=> {
-				// 	console.log("makeMouseLeftKeyDraggable5"); 
-				// });
-			}
-			//makeMouseMiddleKeyDraggable() 
-
-
-
-//			function dragstart_handler(ev) {
-//			  // Add the target element's id to the data transfer object
-//			  ev.dataTransfer.setData("text/plain", ev.target.id);
-//			  console.log("dwadwadwa")
-//			}
-//		  
-//			window.addEventListener("DOMContentLoaded", () => {
-//			  // Get the element by id
-//			  const element = document.getElementById("p1");
-//			  // Add the ondragstart event listener
-//			  element.addEventListener("dragstart", dragstart_handler);
-//			});
-//
-// 
-//		  //Make the DIV element draggagle:
-//		  dragElement(document.getElementById("mydiv"));
-//		  
-//		  function dragElement(elmnt) {
-//			var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-//			if (document.getElementById(elmnt.id + "header")) {
-//			  /* if present, the header is where you move the DIV from:*/
-//			  document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
-//			} else {
-//			  /* otherwise, move the DIV from anywhere inside the DIV:*/
-//			  elmnt.onmousedown = dragMouseDown;
-//			}
-//		  
-//			function dragMouseDown(e) {
-//			  e = e || window.event;
-//			  e.preventDefault();
-//			  // get the mouse cursor position at startup:
-//			  pos3 = e.clientX;
-//			  pos4 = e.clientY;
-//			  document.onmouseup = closeDragElement;
-//			  // call a function whenever the cursor moves:
-//			  document.onmousemove = elementDrag;
-//			}
-//		  
-//			function elementDrag(e) {
-//			  e = e || window.event;
-//			  e.preventDefault();
-//			  // calculate the new cursor position:
-//			  pos1 = pos3 - e.clientX;
-//			  pos2 = pos4 - e.clientY;
-//			  pos3 = e.clientX;
-//			  pos4 = e.clientY;
-//			  // set the element's new position:
-//			  elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
-//			  elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
-//			}
-//		  
-//			function closeDragElement() {
-//			  /* stop moving when mouse button is released:*/
-//			  document.onmouseup = null;
-//			  document.onmousemove = null;
-//			}
-//		  } 
- 
-		</script>
+					element.addEventListener("mousedown", dragStart);
+				}
+				makeMouseMiddleKeyDraggable()
+			</script>
 		  
 		  
 		<script>
@@ -950,29 +858,7 @@
                 });
             });
 			
-			
-			var svg = d3.select("#mouse-svg"),
-			    width = +svg.attr("width"),
-			    height = +svg.attr("height"),
-			    radius = 15;
-
-			var circles = [{dcx: 150, dcy: 150, color: 'rgb(0, 0, 255)', id: 0}];  
-
-			svg.selectAll("circle")
-			  .data(circles)
-			  .enter().append("circle") // draw a cursor 
-			    .attr("class", "mouse-key")
-				.attr("value", "left")
-			    .attr("cx", function(d) { return d.dcx; })
-			    .attr("cy", function(d) { return d.dcy; })
-			    .attr("dcx", function(d) { return d.dcx; })
-			    .attr("dcy", function(d) { return d.dcy; })
-			    .attr("r", radius) 
-			    .style("fill", function(d, i) { return d.color; })
-			    .call(d3.drag()
-			      .on("start", dragstarted)
-			      .on("drag", dragged)
-			      .on("end", dragended)); 
+			 
 
 			var reportDragCursorTimerId, cursorX, cursorY, dragCursorTimeoutId, dragCursorTimeoutCleared, dragCursorActive; 
   
@@ -1012,11 +898,7 @@
 				dragCursorTimeoutId = setTimeout(function (){ dragCursorActive = true; }, 50); // by holding on the cursor
 				reportDragCursorTimerId = setInterval(reportDragCursor, 1000); 
 			} 
-
-			function drag() {
-				console.log('dwadwadwadw')
-			}
-			
+ 
 			function dragged(d) {
 				if (dragCursorActive || dragCursorTimeoutCleared) {
 					;
