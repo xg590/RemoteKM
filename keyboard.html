@@ -16,21 +16,16 @@
             .main {
                 display:flex;
                 flex-direction:column;
-            }
-            .caps-upper-bold {
-                font-weight: bold;
-            }
-            .caps-upper-grey {
+            } 
+            .shift-display-grey {
                 color:rgb(128, 128, 128);
             }
-            .caps-lower-bold {
-                font-weight: bold;
-            }
-            .caps-lower-grey {
-                color:rgb(128, 128, 128);
-            }
-            .letter-caps-lock {
+            .shift-display-white {
                 color:rgb(255, 255, 255);
+                font-weight: bold;
+            } 
+            .letter-display {
+                color:rgb(255, 255, 255); 
             }
             .row {
                 display:flex;
@@ -150,7 +145,7 @@
 				<div class="keyboard-main">
 					<div id="row-esc" class="row" style="margin-bottom:1em;">
 						<div class="key height-full width-full" value_type="int" value="177">
-							<span>esc</span>
+							<span>Esc</span>
 						</div>
 						<div style="width:2em"></div>
 						<div class="key height-full width-full" value_type="int" value="194">
@@ -194,108 +189,108 @@
 					</div>
 					<div class="keyboard-main-lower">
 						<div id="row-~" class="row">
-							<div class="key class-shift" value_type="string" value="`" value_lower="`" value_upper="~">
+							<div class="key" value_type="string" value="`">
 								<div class="height-half width-full">
-									<span class="caps-upper-grey">~</span>
+									<span class="shift-display-grey">~</span>
 								</div>
 								<div class="height-half width-full">
-									<span class="caps-lower-bold">`</span>
-								</div>
-							</div>
-							<div class="key class-shift" value_type="string" value="1" value_lower="1" value_upper="!">
-								<div class="height-half width-full">
-									<span class="caps-upper-grey">!</span>
-								</div>
-								<div class="height-half width-full">
-									<span class="caps-lower-bold">1</span>
+									<span class="shift-display-white">`</span>
 								</div>
 							</div>
-							<div class="key class-shift" value_type="string" value="2" value_lower="2" value_upper="@">
+							<div class="key" value_type="string" value="1">
 								<div class="height-half width-full">
-									<span class="caps-upper-grey">@</span>
+									<span class="shift-display-grey">!</span>
 								</div>
 								<div class="height-half width-full">
-									<span class="caps-lower-bold">2</span>
-								</div>
-							</div>
-							<div class="key class-shift" value_type="string" value="3" value_lower="3" value_upper="#">
-								<div class="height-half width-full">
-									<span class="caps-upper-grey">#</span>
-								</div>
-								<div class="height-half width-full">
-									<span class="caps-lower-bold">3</span>
+									<span class="shift-display-white">1</span>
 								</div>
 							</div>
-							<div class="key class-shift" value_type="string" value="4" value_lower="4" value_upper="$">
+							<div class="key" value_type="string" value="2">
 								<div class="height-half width-full">
-									<span class="caps-upper-grey">$</span>
+									<span class="shift-display-grey">@</span>
 								</div>
 								<div class="height-half width-full">
-									<span class="caps-lower-bold">4</span>
-								</div>
-							</div>
-							<div class="key class-shift" value_type="string" value="5" value_lower="5" value_upper="%">
-								<div class="height-half width-full">
-									<span class="caps-upper-grey">%</span>
-								</div>
-								<div class="height-half width-full">
-									<span class="caps-lower-bold">5</span>
+									<span class="shift-display-white">2</span>
 								</div>
 							</div>
-							<div class="key class-shift" value_type="string" value="6" value_lower="6" value_upper="^">
+							<div class="key" value_type="string" value="3">
 								<div class="height-half width-full">
-									<span class="caps-upper-grey">^</span>
+									<span class="shift-display-grey">#</span>
 								</div>
 								<div class="height-half width-full">
-									<span class="caps-lower-bold">6</span>
-								</div>
-							</div>
-							<div class="key class-shift" value_type="string" value="7" value_lower="7" value_upper="&">
-								<div class="height-half width-full">
-									<span class="caps-upper-grey">&</span>
-								</div>
-								<div class="height-half width-full">
-									<span class="caps-lower-bold">7</span>
+									<span class="shift-display-white">3</span>
 								</div>
 							</div>
-							<div class="key class-shift" value_type="string" value="8" value_lower="8" value_upper="*">
+							<div class="key" value_type="string" value="4">
 								<div class="height-half width-full">
-									<span class="caps-upper-grey">*</span>
+									<span class="shift-display-grey">$</span>
 								</div>
 								<div class="height-half width-full">
-									<span class="caps-lower-bold">8</span>
-								</div>
-							</div>
-							<div class="key class-shift" value_type="string" value="9" value_lower="9" value_upper="(">
-								<div class="height-half width-full">
-									<span class="caps-upper-grey">(</span>
-								</div>
-								<div class="height-half width-full">
-									<span class="caps-lower-bold">9</span>
+									<span class="shift-display-white">4</span>
 								</div>
 							</div>
-							<div class="key class-shift" value_type="string" value="0" value_lower="0" value_upper=")">
+							<div class="key" value_type="string" value="5">
 								<div class="height-half width-full">
-									<span class="caps-upper-grey">)</span>
+									<span class="shift-display-grey">%</span>
 								</div>
 								<div class="height-half width-full">
-									<span class="caps-lower-bold">0</span>
-								</div>
-							</div>
-							<div class="key class-shift" value_type="string" value="-" value_lower="-" value_upper="_">
-								<div class="height-half width-full">
-									<span class="caps-upper-grey">_</span>
-								</div>
-								<div class="height-half width-full">
-									<span class="caps-lower-bold">-</span>
+									<span class="shift-display-white">5</span>
 								</div>
 							</div>
-							<div class="key class-shift" value_type="string" value="=" value_lower="=" value_upper="+">
+							<div class="key" value_type="string" value="6">
 								<div class="height-half width-full">
-									<span class="caps-upper-grey">+</span>
+									<span class="shift-display-grey">^</span>
 								</div>
 								<div class="height-half width-full">
-									<span class="caps-lower-bold">=</span>
+									<span class="shift-display-white">6</span>
+								</div>
+							</div>
+							<div class="key" value_type="string" value="7">
+								<div class="height-half width-full">
+									<span class="shift-display-grey">&</span>
+								</div>
+								<div class="height-half width-full">
+									<span class="shift-display-white">7</span>
+								</div>
+							</div>
+							<div class="key" value_type="string" value="8">
+								<div class="height-half width-full">
+									<span class="shift-display-grey">*</span>
+								</div>
+								<div class="height-half width-full">
+									<span class="shift-display-white">8</span>
+								</div>
+							</div>
+							<div class="key" value_type="string" value="9">
+								<div class="height-half width-full">
+									<span class="shift-display-grey">(</span>
+								</div>
+								<div class="height-half width-full">
+									<span class="shift-display-white">9</span>
+								</div>
+							</div>
+							<div class="key" value_type="string" value="0">
+								<div class="height-half width-full">
+									<span class="shift-display-grey">)</span>
+								</div>
+								<div class="height-half width-full">
+									<span class="shift-display-white">0</span>
+								</div>
+							</div>
+							<div class="key" value_type="string" value="-">
+								<div class="height-half width-full">
+									<span class="shift-display-grey">_</span>
+								</div>
+								<div class="height-half width-full">
+									<span class="shift-display-white">-</span>
+								</div>
+							</div>
+							<div class="key" value_type="string" value="=">
+								<div class="height-half width-full">
+									<span class="shift-display-grey">+</span>
+								</div>
+								<div class="height-half width-full">
+									<span class="shift-display-white">=</span>
 								</div>
 							</div>
 							<div class="key height-full width-backspace" value_type="int" value="178">
@@ -306,58 +301,58 @@
 							<div class="key height-full width-tab align-left" value_type="int" value="179">
 								<span class="align-left-margin">Tab</span>
 							</div>
-							<div class="key height-full width-full class-caps-lock" value_type="string" value="q" value_lower="q" value_upper="Q">
-								<span class="letter-caps-lock">q</span>
+							<div class="key height-full width-full" value_type="string" value="q">
+								<span class="letter-display">q</span>
 							</div>
-							<div class="key height-full width-full class-caps-lock" value_type="string" value="w" value_lower="w" value_upper="W">
-								<span class="letter-caps-lock">w</span>
+							<div class="key height-full width-full" value_type="string" value="w">
+								<span class="letter-display">w</span>
 							</div>
-							<div class="key height-full width-full class-caps-lock" value_type="string" value="e" value_lower="e" value_upper="E">
-								<span class="letter-caps-lock">e</span>
+							<div class="key height-full width-full" value_type="string" value="e">
+								<span class="letter-display">e</span>
 							</div>
-							<div class="key height-full width-full class-caps-lock" value_type="string" value="r" value_lower="r" value_upper="R">
-								<span class="letter-caps-lock">r</span>
+							<div class="key height-full width-full" value_type="string" value="r">
+								<span class="letter-display">r</span>
 							</div>
-							<div class="key height-full width-full class-caps-lock" value_type="string" value="t" value_lower="t" value_upper="T">
-								<span class="letter-caps-lock">t</span>
+							<div class="key height-full width-full" value_type="string" value="t">
+								<span class="letter-display">t</span>
 							</div>
-							<div class="key height-full width-full class-caps-lock" value_type="string" value="y" value_lower="y" value_upper="Y">
-								<span class="letter-caps-lock">y</span>
+							<div class="key height-full width-full" value_type="string" value="y">
+								<span class="letter-display">y</span>
 							</div>
-							<div class="key height-full width-full class-caps-lock" value_type="string" value="u" value_lower="u" value_upper="U">
-								<span class="letter-caps-lock">u</span>
+							<div class="key height-full width-full" value_type="string" value="u">
+								<span class="letter-display">u</span>
 							</div>
-							<div class="key height-full width-full class-caps-lock" value_type="string" value="i" value_lower="i" value_upper="I">
-								<span class="letter-caps-lock">i</span>
+							<div class="key height-full width-full" value_type="string" value="i">
+								<span class="letter-display">i</span>
 							</div>
-							<div class="key height-full width-full class-caps-lock" value_type="string" value="o" value_lower="o" value_upper="O">
-								<span class="letter-caps-lock">o</span>
+							<div class="key height-full width-full" value_type="string" value="o">
+								<span class="letter-display">o</span>
 							</div>
-							<div class="key height-full width-full class-caps-lock" value_type="string" value="p" value_lower="p" value_upper="P">
-								<span class="letter-caps-lock">p</span>
+							<div class="key height-full width-full" value_type="string" value="p">
+								<span class="letter-display">p</span>
 							</div>
-							<div class="key class-shift" value_type="string" value="[" value_lower="[" value_upper="{">
+							<div class="key" value_type="string" value="[">
 								<div class="height-half width-full">
-									<span class="caps-upper-grey">{</span>
+									<span class="shift-display-grey">{</span>
 								</div>
 								<div class="height-half width-full">
-									<span class="caps-lower-bold">[</span>
+									<span class="shift-display-white">[</span>
 								</div>
 							</div>
-							<div class="key class-shift" value_type="int" value="]" value_lower="]" value_upper="}">
+							<div class="key" value_type="int" value="]">
 								<div class="height-half width-full">
-									<span class="caps-upper-grey">}</span>
+									<span class="shift-display-grey">}</span>
 								</div>
 								<div class="height-half width-full">
-									<span class="caps-lower-bold">]</span>
+									<span class="shift-display-white">]</span>
 								</div>
 							</div>
-							<div class="key class-shift" value_type="int" value="\" value_lower="\" value_upper="|">
+							<div class="key" value_type="int" value="\">
 								<div class="height-half width-full">
-									<span class="caps-upper-grey">|</span>
+									<span class="shift-display-grey">|</span>
 								</div>
 								<div class="height-half width-full">
-									<span class="caps-lower-bold">\</span>
+									<span class="shift-display-white">\</span>
 								</div>
 							</div>
 						</div>
@@ -365,47 +360,47 @@
 							<div class="key height-full width-caps align-left" value_type="int" value="193" id="key-caps-lock">
 								<span class="align-left-margin">Caps Lock</span>
 							</div>
-							<div class="key height-full width-full class-caps-lock" value_type="string" value="a" value_lower="a" value_upper="A">
-								<span class="letter-caps-lock">a</span>
+							<div class="key height-full width-full" value_type="string" value="a">
+								<span class="letter-display">a</span>
 							</div>
-							<div class="key height-full width-full class-caps-lock" value_type="string" value="s" value_lower="s" value_upper="S">
-								<span class="letter-caps-lock">s</span>
+							<div class="key height-full width-full" value_type="string" value="s">
+								<span class="letter-display">s</span>
 							</div>
-							<div class="key height-full width-full class-caps-lock" value_type="string" value="d" value_lower="d" value_upper="D">
-								<span class="letter-caps-lock">d</span>
+							<div class="key height-full width-full" value_type="string" value="d">
+								<span class="letter-display">d</span>
 							</div>
-							<div class="key height-full width-full class-caps-lock" value_type="string" value="f" value_lower="f" value_upper="F">
-								<span class="letter-caps-lock">f</span>
+							<div class="key height-full width-full" value_type="string" value="f">
+								<span class="letter-display">f</span>
 							</div>
-							<div class="key height-full width-full class-caps-lock" value_type="string" value="g" value_lower="g" value_upper="G">
-								<span class="letter-caps-lock">g</span>
+							<div class="key height-full width-full" value_type="string" value="g">
+								<span class="letter-display">g</span>
 							</div>
-							<div class="key height-full width-full class-caps-lock" value_type="string" value="h" value_lower="h" value_upper="H">
-								<span class="letter-caps-lock">h</span>
+							<div class="key height-full width-full" value_type="string" value="h">
+								<span class="letter-display">h</span>
 							</div>
-							<div class="key height-full width-full class-caps-lock" value_type="string" value="j" value_lower="j" value_upper="J">
-								<span class="letter-caps-lock">j</span>
+							<div class="key height-full width-full" value_type="string" value="j">
+								<span class="letter-display">j</span>
 							</div>
-							<div class="key height-full width-full class-caps-lock" value_type="string" value="k" value_lower="k" value_upper="K">
-								<span class="letter-caps-lock">k</span>
+							<div class="key height-full width-full" value_type="string" value="k">
+								<span class="letter-display">k</span>
 							</div>
-							<div class="key height-full width-full class-caps-lock" value_type="string" value="l" value_lower="l" value_upper="L">
-								<span class="letter-caps-lock">l</span>
+							<div class="key height-full width-full" value_type="string" value="l">
+								<span class="letter-display">l</span>
 							</div>
-							<div class="key class-shift" value_type="string" value=";" value_lower=";" value_upper=":">
+							<div class="key" value_type="string" value=";">
 								<div class="height-half width-full">
-									<span class="caps-upper-grey">:</span>
+									<span class="shift-display-grey">:</span>
 								</div>
 								<div class="height-half width-full">
-									<span class="caps-lower-bold">;</span>
+									<span class="shift-display-white">;</span>
 								</div>
 							</div>
-							<div class="key class-shift" value_type="string" value="'" value_lower="'" value_upper="&quot;">
+							<div class="key" value_type="string" value="'">
 								<div class="height-half width-full">
-									<span class="caps-upper-grey">"</span>
+									<span class="shift-display-grey">"</span>
 								</div>
 								<div class="height-half width-full">
-									<span class="caps-lower-bold">'</span>
+									<span class="shift-display-white">'</span>
 								</div>
 							</div>
 							<div class="key height-full width-return align-right" value_type="int" value="176">
@@ -416,49 +411,49 @@
 							<div class="key height-full width-shift align-left" value_type="int" value="129" id="key-shift-left">
 								<span class="align-left-margin">Shift</span>
 							</div>
-							<div class="key height-full width-full class-caps-lock" value_type="string" value="z" value_lower="z" value_upper="Z">
-								<span class="letter-caps-lock">z</span>
+							<div class="key height-full width-full" value_type="string" value="z">
+								<span class="letter-display">z</span>
 							</div>
-							<div class="key height-full width-full class-caps-lock" value_type="string" value="x" value_lower="x" value_upper="X">
-								<span class="letter-caps-lock">x</span>
+							<div class="key height-full width-full" value_type="string" value="x">
+								<span class="letter-display">x</span>
 							</div>
-							<div class="key height-full width-full class-caps-lock" value_type="string" value="c" value_lower="c" value_upper="C">
-								<span class="letter-caps-lock">c</span>
+							<div class="key height-full width-full" value_type="string" value="c">
+								<span class="letter-display">c</span>
 							</div>
-							<div class="key height-full width-full class-caps-lock" value_type="string" value="v" value_lower="v" value_upper="V">
-								<span class="letter-caps-lock">v</span>
+							<div class="key height-full width-full" value_type="string" value="v">
+								<span class="letter-display">v</span>
 							</div>
-							<div class="key height-full width-full class-caps-lock" value_type="string" value="b" value_lower="b" value_upper="B">
-								<span class="letter-caps-lock">b</span>
+							<div class="key height-full width-full" value_type="string" value="b">
+								<span class="letter-display">b</span>
 							</div>
-							<div class="key height-full width-full class-caps-lock" value_type="string" value="n" value_lower="n" value_upper="N">
-								<span class="letter-caps-lock">n</span>
+							<div class="key height-full width-full" value_type="string" value="n">
+								<span class="letter-display">n</span>
 							</div>
-							<div class="key height-full width-full class-caps-lock" value_type="string" value="m" value_lower="m" value_upper="M">
-								<span class="letter-caps-lock">m</span>
+							<div class="key height-full width-full" value_type="string" value="m">
+								<span class="letter-display">m</span>
 							</div>
-							<div class="key class-shift" value_type="string" value="," value_lower="," value_upper="&lt;">
+							<div class="key" value_type="string" value=",">
 								<div class="height-half width-full">
-									<span class="caps-upper-grey">&lt;</span>
+									<span class="shift-display-grey">&lt;</span>
 								</div>
 								<div class="height-half width-full">
-									<span class="caps-lower-bold">,</span>
+									<span class="shift-display-white">,</span>
 								</div>
 							</div>
-							<div class="key class-shift" value_type="string" value="." value_lower="." value_upper=">">
+							<div class="key" value_type="string" value=".">
 								<div class="height-half width-full">
-									<span class="caps-upper-grey">&gt;</span>
+									<span class="shift-display-grey">&gt;</span>
 								</div>
 								<div class="height-half width-full">
-									<span class="caps-lower-bold">.</span>
+									<span class="shift-display-white">.</span>
 								</div>
 							</div>
-							<div class="key class-shift" value_type="string" value="/" value_lower="/" value_upper="?">
+							<div class="key" value_type="string" value="/">
 								<div class="height-half width-full">
-									<span class="caps-upper-grey">?</span>
+									<span class="shift-display-grey">?</span>
 								</div>
 								<div class="height-half width-full">
-									<span class="caps-lower-bold">/</span>
+									<span class="shift-display-white">/</span>
 								</div>
 							</div>
 							<div class="key height-full width-shift align-right" value_type="int" value="133" id="key-shift-right">
@@ -638,154 +633,226 @@
 				</div> 
 			</div> 
 			<div class="mouse"> 
-				<svg width="300" height="300" style="border: 1px dashed black">  	
-					<circle cx="150" cy="150" r="130" style="fill:none;stroke:#FF7F7F;stroke-width:16px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;z-index: 1;"/> 
-					<g transform="translate(126 ,119) scale(.9 .9)">
-						<path style="fill:rgb(0, 0, 0)"  d="M 39.710313,148.97269 C 28.327149,147.69288 17.462708,141.44664 10.55227,132.20902 6.8480978,127.25741 4.0924009,121.22018 2.9480354,115.54953 1.9874711,110.78967 2.0110486,111.80938 2.0110486,75.025468 2.0110486,42.541848 2.0358062,40.028012 2.3773,37.837033 3.8922803,28.117127 7.8452533,20.230747 14.568426,13.515123 21.38484,6.7063639 30.079474,2.4755187 39.510542,1.378186 c 3.882671,-0.45176054 17.358742,-0.45176054 21.241416,0 9.414675,1.0954255 18.142063,5.342401 24.940984,12.136937 6.559264,6.555032 10.701491,14.735025 12.057569,23.811082 0.381067,2.550418 0.396928,4.053553 0.397829,37.704624 5.79e-4,23.277925 -0.0712,35.629791 -0.213878,36.779771 -0.580244,4.67676 -1.90286,9.14106 -3.963558,13.37839 -6.438242,13.23871 -19.131858,22.20969 -33.666083,23.79288 -2.319475,0.25266 -18.32908,0.24552 -20.594508,-0.009 z m 19.77718,-5.50778 c 8.766848,-0.95497 16.260192,-4.53169 22.426264,-10.70451 5.306704,-5.31252 8.760801,-11.90338 10.232465,-19.52484 0.348325,-1.8039 0.379208,-3.67128 0.436774,-26.409914 l 0.06194,-24.468764 H 50.130558 7.6161763 l 0.066607,24.673096 0.066608,24.673102 0.5474359,2.46618 c 1.7976148,8.09821 5.8187338,15.00881 11.7891568,20.26058 5.578042,4.90662 12.578218,8.06872 19.798526,8.94334 2.725861,0.33019 16.80883,0.39609 19.602983,0.0917 z M 92.632317,48.814523 c 0,-9.569154 -0.295567,-12.29557 -1.838171,-16.955941 -0.77851,-2.351968 -2.903574,-6.6975 -4.282791,-8.757868 C 80.245912,13.74097 70.322728,7.8523168 59.019693,6.7865102 56.100556,6.5112535 44.166713,6.5138257 41.140638,6.7903647 25.606447,8.209959 12.674864,19.190481 8.7508046,34.293362 7.7965416,37.96612 7.6301802,40.100935 7.6301802,48.673658 v 7.961927 H 50.13125 92.632317 Z" />
-                        <path id="mouse-key-left"   r="10" style="fill:rgba(89, 0, 255, 0.849)" transform="translate(0,0)" d="M 7.8431578,47.491725 C 7.9301107,39.048633 7.9716034,38.191269 8.3845658,36.304542 11.650263,21.384377 22.807315,10.384496 37.722352,7.3800447 39.521859,7.0175562 40.917224,6.9077202 44.720726,6.8291687 l 4.750719,-0.098114 v 5.4385533 5.438552 h -1.407039 c -1.30427,0 -1.497574,0.06045 -2.646523,0.827696 -1.255224,0.838204 -2.240687,1.99534 -3.123483,3.667609 l -0.485405,0.919495 v 8.581945 8.581947 l 0.579103,1.099877 c 0.761583,1.446452 2.170574,2.929869 3.618057,3.809169 0.967346,0.587632 1.366933,0.710088 2.317109,0.710088 h 1.148181 v 5.414798 5.414801 H 28.610217 7.7489881 Z" />
-                        <path id="mouse-key-middle" y="10" style="fill:rgba(0, 255, 85, 0.849)" transform="translate(0,0)" d="m 46.257915,45.134296 c -1.34153,-0.703534 -3.011631,-2.376213 -3.645647,-3.651274 -0.893193,-1.796284 -0.905616,-1.931377 -0.905616,-9.848196 0,-4.653086 0.05588,-7.45669 0.158495,-7.952416 0.441722,-2.133851 2.227019,-4.499447 4.163779,-5.517185 l 0.993671,-0.522158 h 3.034496 3.034497 l 0.83929,0.441492 c 1.831438,0.963392 3.32614,2.714758 4.065612,4.763743 l 0.389714,1.079844 0.04913,7.064763 c 0.04239,6.095483 0.0168,7.224383 -0.186609,8.228181 -0.547422,2.70163 -2.372248,5.021473 -4.806825,6.110753 -0.715121,0.319962 -0.931289,0.340972 -3.46763,0.337045 l -2.704967,-0.0042 z" />
-                        <path id="mouse-key-right"         style="fill:rgba(255, 0, 0, 0.849)" d="m 50.493105,51.248759 v -5.386824 l 1.304933,-0.104746 c 2.424705,-0.194634 4.638848,-1.919637 5.91106,-4.605209 l 0.650793,-1.37379 V 31.502739 23.227292 L 57.788725,22.06419 C 57.08317,20.627423 55.715748,19.081246 54.409121,18.242785 53.53827,17.683962 53.245336,17.60816 51.956626,17.60816 H 50.493105 V 12.169916 6.7316716 l 4.852888,0.1015494 c 5.068518,0.1060616 6.616155,0.2989013 10.135662,1.2629303 9.343658,2.5593217 17.477928,8.8539297 22.122812,17.1194737 2.443685,4.348525 4.066197,9.050926 4.566386,13.234406 0.127647,1.067633 0.28667,5.596143 0.353381,10.063354 l 0.121288,8.1222 H 71.569314 50.493105 Z"/>
-					</g> 
-				</svg> 
+				<svg width="300" height="300" style="border: 1px dashed black" > 
+					<g id="mouse-as-whole" transform="translate(0, 0) scale(1 1)"> 
+						<path id="mouse-key-right"  style="fill:#ff0000"                            d="m 150.49046,132.13084 v -1.22221 l 1.07607,-10e-4 c 1.87691,-0.002 2.39368,-0.0899 3.4142,-0.57822 1.25076,-0.59848 2.22092,-1.28843 3.21566,-2.2869 0.975,-0.97867 1.70673,-2.01381 2.33967,-3.30985 0.60827,-1.24552 1.00859,-2.64193 1.1695,-4.07954 0.0887,-0.79246 0.11837,-7.79748 0.0623,-14.71958 l -0.0462,-5.71247 -0.38374,-1.03622 c -0.21106,-0.569919 -0.50175,-1.283361 -0.64598,-1.585427 -0.97425,-2.040461 -2.49919,-3.805646 -4.35615,-5.042409 -0.2192,-0.145991 -0.7635,-0.460077 -1.20955,-0.697969 l -0.81101,-0.432531 h -1.91238 -1.91238 v -1.461331 -1.46133 h 0.52356 c 0.97172,0 5.07349,0.104859 6.30484,0.161179 2.30234,0.105306 3.65889,0.297278 5.63276,0.797123 2.69314,0.681981 4.62463,1.389104 6.96125,2.548529 3.30563,1.640241 6.0326,3.609095 8.71797,6.294315 2.52291,2.522781 4.18755,4.797271 5.8596,8.006341 1.73919,3.33792 3.02772,7.26264 3.43499,10.46261 0.18157,1.42664 0.29684,5.21755 0.43182,14.20148 l 0.0357,2.37798 H 169.4417 150.49044 Z" /> 
+						<path id="mouse-itself"     style="fill:#ffff00"                            d="m 139.78199,211.14126 c -4.33684,-0.61608 -9.99098,-2.96863 -14.01841,-5.83272 -6.1818,-4.39616 -10.99519,-11.43455 -12.86755,-18.81562 -0.71656,-2.82477 -0.72115,-2.94819 -0.94019,-25.292 l -0.22011,-22.45339 H 150 188.26427 l -0.16538,22.31965 -0.16539,22.31964 -0.75571,2.90668 c -2.40721,9.25875 -8.33489,16.88067 -16.59231,21.33466 -2.81134,1.51642 -6.68879,2.84353 -9.98995,3.41921 -2.91447,0.50824 -17.43564,0.57375 -20.81354,0.0939 z" /> 
+						<path id="mouse-frame"      style="fill:#000000"                            d="m 140.66758,216.48228 c -10.24485,-1.15183 -20.02284,-6.77345 -26.24224,-15.08731 -3.33375,-4.45644 -5.81388,-9.88995 -6.84381,-14.99354 -0.86451,-4.28387 -0.84329,-3.36613 -0.84329,-36.47165 0,-29.23526 0.0223,-31.49772 0.32963,-33.4696 1.36348,-8.74791 4.92116,-15.84565 10.97201,-21.889715 6.13478,-6.127883 13.95995,-9.935644 22.44791,-10.923243 3.4944,-0.406584 15.62287,-0.406584 19.11727,0 8.47321,0.985883 16.32786,4.808161 22.44689,10.923243 5.90334,5.899525 9.63134,13.261525 10.85181,21.429975 0.34296,2.29537 0.35724,3.6482 0.35805,33.93416 5.2e-4,20.95013 -0.0641,32.06681 -0.19249,33.1018 -0.52222,4.20908 -1.71258,8.22695 -3.56721,12.04055 -5.79441,11.91484 -17.21867,19.98872 -30.29947,21.41359 -2.08753,0.22739 -16.49617,0.22097 -18.53506,-0.008 z m 17.79946,-4.957 c 7.89017,-0.85948 14.63418,-4.07853 20.18364,-9.63406 4.77603,-4.78127 7.88472,-10.71305 9.20922,-17.57236 0.31349,-1.62351 0.34129,-3.30415 0.3931,-23.76892 l 0.0557,-22.02189 h -38.2629 -38.26294 l 0.0599,22.20578 0.06,22.2058 0.49269,2.21956 c 1.61786,7.28839 5.23686,13.50793 10.61025,18.23452 5.02023,4.41596 11.32039,7.26185 17.81867,8.04901 2.45327,0.29717 15.12795,0.35648 17.64268,0.0825 z m 29.83035,-85.18536 c 0,-8.61223 -0.26602,-11.06601 -1.65436,-15.26034 -0.70066,-2.11677 -2.61322,-6.02775 -3.85451,-7.88208 -5.6389,-8.423772 -14.56976,-13.72356 -24.7425,-14.682786 -2.62722,-0.247731 -13.36768,-0.245416 -16.09115,0.0035 -13.98077,1.277635 -25.61919,11.160105 -29.15085,24.752696 -0.85883,3.30548 -1.00856,5.22682 -1.00856,12.94227 v 7.16573 h 38.25096 38.25097 z" /> 
+						<path id="mouse-key-left"   style="fill:#00ff00" transform="translate(0,0)" d="m 111.97538,130.78031 c 0.002,-4.22841 0.14151,-12.4977 0.22796,-13.54584 0.27395,-3.32145 1.97807,-8.34719 4.05161,-11.9489 1.59161,-2.76461 3.1124,-4.73879 5.4449,-7.068173 2.6836,-2.680014 5.0554,-4.393273 8.4229,-6.084243 2.91123,-1.461862 5.55449,-2.385247 8.60015,-3.004339 1.85202,-0.376461 3.10692,-0.460669 8.92865,-0.599138 l 1.74725,-0.04156 v 1.466111 1.466111 h -1.89217 -1.89216 l -0.98233,0.52597 c -1.24176,0.664871 -2.05969,1.279616 -3.01369,2.265042 -1.54691,1.597875 -2.74409,3.658612 -3.15514,5.431021 -0.19376,0.835498 -0.25944,3.812378 -0.25962,11.767948 -2.2e-4,10.68818 0.0361,11.11866 1.12737,13.33918 0.55913,1.13777 1.21134,2.01085 2.36081,3.16033 1.13361,1.1336 1.96947,1.75865 3.31064,2.47564 l 1.0521,0.56246 1.67209,7.5e-4 1.6721,7.5e-4 v 1.2024 1.20241 h -18.71243 -18.71242 l 0.001,-2.5739 z" /> 
+						<path id="mouse-key-middle" style="fill:#0000ff" transform="translate(0,0)" d="m 144.61847,130.14225 c -1.88905,-0.99068 -4.2408,-3.34605 -5.13359,-5.14151 -1.25774,-2.52943 -1.27523,-2.71966 -1.27523,-13.86768 0,-6.55221 0.0787,-10.50009 0.22318,-11.198158 0.622,-3.00476 3.13596,-6.33586 5.86319,-7.768982 l 1.39924,-0.735273 h 4.273 4.27301 l 1.18184,0.621684 c 2.57894,1.356591 4.68369,3.822771 5.72496,6.708041 l 0.54879,1.520568 0.0691,9.9482 c 0.0596,8.58333 0.0236,10.17298 -0.26277,11.58647 -0.77085,3.80428 -3.34046,7.07095 -6.7687,8.60481 -1.00699,0.45056 -1.31139,0.48014 -4.88292,0.47461 l -3.80898,-0.006 z" /> 
+					</g>
+					<circle cx="150" cy="150" r="3" style="display:none;fill:rgb(0, 0, 0)"/>
+				</svg>  
 			</div> 
-		</div> 
+		</div>
 
-			<script type="text/javascript">
-				var clickedMouseKey=null, originalX, originalY, currentX, currentY, rLimit;
-
-				function draggingMouseKeyLeft (evt) { 
-					console.log("left-ing")
-					var dx = evt.clientX-originalX,
-					    dy = evt.clientY-originalY,
-						dist = Math.sqrt(dx * dx + dy * dy);  
-					if (dist>rLimit) { 
-						mouseRestoreEveryThing()
-						return ; 
-					} 
-					evt.target.transform.baseVal.getItem(0).setTranslate(dx,dy); 
-				} 
-				
-				document.getElementById("mouse-key-left").addEventListener("mousedown", (evt)=>{ 
-					console.log("middle-left")
-					rLimit = 140;
-					selectedMouseKey = evt.target.id; 
-					originalX = evt.clientX;
-					originalY = evt.clientY;   
-					evt.target.addEventListener('mousemove', draggingMouseKeyLeft);  
-					evt.target.addEventListener("mouseleave", mouseRestoreEveryThing); 
-					evt.target.addEventListener("mouseup", mouseRestoreEveryThing); 
-					document.getElementById("mouse-key-middle").style.display = "none";
-					document.getElementById("mouse-key-right").style.display = "none"; 
-				});
-				
-				function draggingMouseKeyMiddle (evt) {   
-					var dy = evt.clientY-originalY;
-					if (dy > -1*rLimit && dy < rLimit) {
-						evt.target.transform.baseVal.getItem(0).setTranslate(0,dy); 
-					} 
-				} 
-
-				document.getElementById("mouse-key-middle").addEventListener("mousedown", (evt)=>{  
-					console.log("middle-start")
-					rLimit = 60;
-					selectedMouseKey = evt.target.id; 
-					originalY = evt.clientY;
-					evt.target.addEventListener('mousemove', draggingMouseKeyMiddle);  
-					evt.target.addEventListener("mouseleave", mouseRestoreEveryThing); 
-					evt.target.addEventListener("mouseup", mouseRestoreEveryThing); 
-					document.getElementById("mouse-key-left").style.display = "none";
-					document.getElementById("mouse-key-right").style.display = "none"; 
-				}); 
-
-				function mouseRestoreEveryThing() {
-					console.log("1")
-					if (selectedMouseKey=="mouse-key-left") {
-						document.getElementById(selectedMouseKey).removeEventListener('mousemove', draggingMouseKeyLeft); 
-					} else if (selectedMouseKey=="mouse-key-middle") {
-						document.getElementById(selectedMouseKey).removeEventListener('mousemove', draggingMouseKeyMiddle);   
-					} else {
-						return ;
-					}
-					document.getElementById(selectedMouseKey).removeEventListener("mouseleave", mouseRestoreEveryThing); 
-					document.getElementById(selectedMouseKey).removeEventListener("mouseup", mouseRestoreEveryThing); 
-					document.getElementById(selectedMouseKey).transform.baseVal.getItem(0).setTranslate(0,0);  
-					selectedMouseKey = null;
-					document.getElementById("mouse-key-left").style.display = "initial";
+		<script type="text/javascript"> 
+			var mouseKeyId=null, mouseKeyValue=0, originalX=0, originalY=0, dx=0, dy=0, reportMouseEventTimerId=0, reportMouseEvent='', reportMouseEventInterval=75; 
+			 
+			document.getElementById("mouse-key-right").addEventListener("click", (evt)=>{ 
+				document.getElementById("mouse-key-left" ).style.display = "none"; 
+				document.getElementById("mouse-key-middle").style.display = "none"; 
+				setTimeout(()=>{
+					document.getElementById("mouse-key-left" ).style.display = "initial";  
 					document.getElementById("mouse-key-middle").style.display = "initial";
-					document.getElementById("mouse-key-right").style.display = "initial"; 
+				}, 100);
+				socket.send(JSON.stringify({
+					"device_type" : "virtual_mouse"  , 
+					"device_id"   : device_id        ,
+					"key_type"    : "mouse-key-right",  
+					"value"       : 2                ,  
+					"mouse_event" : "click"          , 
+			  	}));   
+				
+				  socket.send(JSON.stringify({  
+						"device_type"    : "virtual_keyboard",
+						"value"          : "78",
+						"value_type"     : "int",
+						"keystroke_type" : "xxx"
+					}));
+			}); 
+
+			function xyz_modifier(x) {
+				x = x + 128;
+				if (x>255) {
+					return 255
+				} else if (x<0) {
+					return 0
+				} else {
+					return Math.floor(x)
 				}
- 
-				// if (evt.touches) { evt = evt.touches[0]; }  
-				//addEventListener('touchstart', startDrag);
-				//addEventListener('touchmove', drag);
-				//addEventListener('touchend', endDrag);
-				//addEventListener('touchleave', endDrag);
-				//addEventListener('touchcancel', endDrag);    
- 
-			</script>
-		  
-		  
-		<script>
-			/*
-			var case_lock  = false; 
-			function function_case_switch() {
-                case_lock = !case_lock;
-                if (case_lock) {
-                    document.querySelectorAll('.letter-caps-lock').forEach(ele => {
-                        ele.innerHTML = ele.innerHTML.toUpperCase();
-                    });
-                    document.querySelectorAll('.class-caps-lock').forEach(ele => {
-                        ;//ele.setAttribute(value, );
-                        ele.setAttribute("value", ele.getAttribute("value_upper"));
-                    });
-                } else {
-                    document.querySelectorAll('.letter-caps-lock').forEach(ele => {
-                        ele.innerHTML = ele.innerHTML.toLowerCase();
-                    });
-                    document.querySelectorAll('.class-caps-lock').forEach(ele => {
-                        ele.setAttribute("value", ele.getAttribute("value_lower"));
-                    });
-                 };
+			}
+
+			function draggingMouseXY (evt) {
+				dx = evt.clientX-originalX,
+				dy = evt.clientY-originalY;
+				document.getElementById(mouseKeyId).transform.baseVal.getItem(0).setTranslate(dx,dy);  
+				reportMouseEvent = JSON.stringify({ 
+					"device_type": "virtual_mouse", 
+					"device_id"  : device_id      ,
+					"key_type"   : mouseKeyId,
+					"mouse_event": "mousemove",
+					"dx": xyz_modifier(dx), "dy": xyz_modifier(dy), "dz": 128, 
+			  	});  
+				if (reportMouseEventTimerId==0) {
+					reportMouseEventTimerId = setInterval(()=>{socket.send(reportMouseEvent);}, reportMouseEventInterval);
+				} 
 			} 
-            //encodeURIComponent(String.fromCharCode(code))
-			var shift_lock = false;
-            function func_shift() {
-                shift_lock = !shift_lock;
-                if (shift_lock) {
-                    document.querySelectorAll('.caps-upper-grey').forEach(ele => {
-                        ele.className = "caps-upper-bold";
-                    });
-                    document.querySelectorAll('.caps-lower-bold').forEach(ele => {
-                        ele.className = "caps-lower-grey";
-                    });
-                    document.querySelectorAll('.class-shift').forEach(ele => {
-                        ;//ele.setAttribute(value, );
-                        ele.setAttribute("value", ele.getAttribute("value_upper"));
-                    });
-                } else {
-                    document.querySelectorAll('.caps-upper-bold').forEach(ele => {
-                        ele.className = "caps-upper-grey";
-                    });
-                    document.querySelectorAll('.caps-lower-grey').forEach(ele => {
-                        ele.className = "caps-lower-bold";
-                    });
-                    document.querySelectorAll('.class-shift').forEach(ele => {
-                        ele.setAttribute("value", ele.getAttribute("value_lower"));
-                    });
-                 };
-				 function_case_switch();
+
+			document.getElementById("mouse-key-left").addEventListener("mousedown", (evt)=>{ 
+            	mouseKeyId=evt.target.id;  
+				originalX = evt.clientX;
+				originalY = evt.clientY;
+				document.getElementById(mouseKeyId).addEventListener('mousemove' , draggingMouseXY);  
+				document.getElementById(mouseKeyId).addEventListener("mouseleave", mouseRestoreEveryThing); 
+				document.getElementById(mouseKeyId).addEventListener("mouseup"   , mouseRestoreEveryThing); 
+				document.getElementById("mouse-key-middle").style.display = "none";
+				document.getElementById("mouse-key-right" ).style.display = "none"; 
+				
+				console.log(JSON.stringify({
+					"device_type" : "virtual_mouse"  , 
+					"device_id"   : device_id        ,
+					"key_type"    : "mouse-key-left",  
+					"value"       : 1                ,  
+					"mouse_event" : "click"          , 
+			  	}));   
+			}); 
+
+			document.getElementById("mouse-itself").addEventListener("mousedown", (evt)=>{ 
+            	mouseKeyId="mouse-as-whole";
+				originalX = evt.clientX;
+				originalY = evt.clientY;
+				document.getElementById("mouse-itself").addEventListener('mousemove', draggingMouseXY);  
+				document.getElementById("mouse-itself").addEventListener("mouseleave", mouseRestoreEveryThing); 
+				document.getElementById("mouse-itself").addEventListener("mouseup", mouseRestoreEveryThing); 
+				socket.send(JSON.stringify({ 
+					"device_type": "virtual_mouse",
+					"key_type"   : mouseKeyId     ,
+					"mouse_event": "mousedown"    , 
+					"value"      : 1              ,  
+			  	}));
+			});
+			
+			function draggingMouseZ (evt) {   
+				dy = evt.clientY-originalY;
+				evt.target.transform.baseVal.getItem(0).setTranslate(0, dy); 
+				reportMouseEvent = JSON.stringify({ 
+					"device_type": "virtual_mouse",
+					"key_type": mouseKeyId, 
+					"mouse_event":"mousemove",
+					"dx": 128, "dy": 128, "dz": xyz_modifier(dy), 
+			  	}) ; 
+				if (reportMouseEventTimerId==0) {
+					reportMouseEventTimerId = setInterval(()=>{socket.send(reportMouseEvent);}, reportMouseEventInterval);
+				} 
+			} 
+
+			document.getElementById("mouse-key-middle").addEventListener("mousedown", (evt)=>{   
+				mouseKeyId = evt.target.id; 
+				originalY  = evt.clientY;
+				document.getElementById(mouseKeyId).addEventListener('mousemove' , draggingMouseZ);  
+				document.getElementById(mouseKeyId).addEventListener("mouseleave", mouseRestoreEveryThing); 
+				document.getElementById(mouseKeyId).addEventListener("mouseup"   , mouseRestoreEveryThing); 
+				document.getElementById("mouse-key-left" ).style.display = "none";
+				document.getElementById("mouse-key-right").style.display = "none"; 
+				socket.send(JSON.stringify({ 
+					"device_type": "virtual_mouse",
+					"device_id"  : device_id      ,
+					"key_type"   : mouseKeyId,
+					"mouse_event": "mousedown", 
+					"value"      : 4         , 
+			  	}));   
+			}); 
+
+			function mouseRestoreEveryThing() { 
+				console.log(reportMouseEventTimerId);
+				document.getElementById("mouse-key-left"  ).style.display = "initial";
+				document.getElementById("mouse-key-middle").style.display = "initial";
+				document.getElementById("mouse-key-right" ).style.display = "initial"; 
+				clearInterval(reportMouseEventTimerId);
+				dx=0, dy=0, reportMouseEventTimerId=0;
+				var value=0;
+				if (mouseKeyId=="mouse-key-left") {
+					document.getElementById(mouseKeyId).removeEventListener('mousemove' , draggingMouseXY); 
+					document.getElementById(mouseKeyId).removeEventListener("mouseleave", mouseRestoreEveryThing); 
+					document.getElementById(mouseKeyId).removeEventListener("mouseup"   , mouseRestoreEveryThing);   
+					document.getElementById(mouseKeyId).transform.baseVal.getItem(0).setTranslate(0,0);  
+					mouseKeyId = null; 
+					return ; 
+				} else if (mouseKeyId=="mouse-key-middle") {
+					document.getElementById(mouseKeyId).removeEventListener("mousemove" , draggingMouseZ);  
+					document.getElementById(mouseKeyId).removeEventListener("mouseleave", mouseRestoreEveryThing); 
+					document.getElementById(mouseKeyId).removeEventListener("mouseup"   , mouseRestoreEveryThing);   
+					value=4;
+				} else if (mouseKeyId=="mouse-as-whole") { 
+					document.getElementById("mouse-itself").removeEventListener('mousemove', draggingMouseXY); 
+					document.getElementById("mouse-itself").removeEventListener("mouseleave", mouseRestoreEveryThing); 
+					document.getElementById("mouse-itself").removeEventListener("mouseup", mouseRestoreEveryThing); 
+					value=1;
+				}
+				document.getElementById(mouseKeyId).transform.baseVal.getItem(0).setTranslate(0,0); 
+				socket.send(JSON.stringify({ 
+					"device_type" : "virtual_mouse",
+					"device_id"   : device_id      ,
+					"key_type"    : mouseKeyId     , 
+					"mouse_event" : "mouseup"      ,
+					"value"       : value          , 
+			  	}));  
+				mouseKeyId = null; 
+			}
+			// if (evt.touches) { evt = evt.touches[0]; }
+			//addEventListener('touchstart', startDrag);
+			//addEventListener('touchmove', drag);
+			//addEventListener('touchend', endDrag);
+			//addEventListener('touchleave', endDrag);
+			//addEventListener('touchcancel', endDrag);
+		</script>
+		  
+		  
+		<script> 
+			var case_lock=false, shift_lock=false;  
+
+			function function_caps_key() { 
+                document.querySelectorAll('.letter-display').forEach(ele => {
+					if (case_lock) {
+						ele.innerHTML = ele.innerHTML.toLowerCase();
+					} else {
+						ele.innerHTML = ele.innerHTML.toUpperCase();
+					} 
+                });   
+                case_lock = !case_lock;
+            };
+
+            //encodeURIComponent(String.fromCharCode(code)) 
+            function func_shift_key() { 
+                document.querySelectorAll('.letter-display').forEach(ele => {
+					if (case_lock) {
+						ele.innerHTML = ele.innerHTML.toLowerCase();
+					} else {
+						ele.innerHTML = ele.innerHTML.toUpperCase();
+					} 
+                });
+                document.querySelectorAll('.shift-display-grey,.shift-display-white').forEach(ele => {
+					if (ele.className == "shift-display-grey") {
+                    	ele.className = "shift-display-white"; 
+					} else {
+                    	ele.className = "shift-display-grey"; 
+					}
+                }); 
+                case_lock = !case_lock; 
             } 
 			
 			var username = "hello";
     		var password = "iloveyou";
     		var hostname = "guoxiaokang.com";
     		var hostname = "192.168.12.223";
-			let socket = new WebSocket("wss://"+username+":"+password+"@"+hostname+":8765"); // ws://guoxiaokang:8765
-			socket = new WebSocket("ws://"+username+":"+password+"@"+hostname+":8765"); // ws://guoxiaokang:8765 
+			//let socket = new WebSocket("wss://"+username+":"+password+"@"+hostname+":8765"); // ws://guoxiaokang:8765
+			let socket = new WebSocket("ws://"+username+":"+password+"@"+hostname+":8765"); // ws://guoxiaokang:8765 
 			socket.onopen = function(e) {
-			  socket.send(JSON.stringify({ 
-						"greeting": "virtual_keyboard"
-					}));
+				socket.send(JSON.stringify({ 
+					"msg_type"   : "ready",
+					"device_type": "virtual_keyboard", 
+				}));
 			};
 			socket.onclose = function(event) {
 			  if (event.wasClean) {
@@ -798,134 +865,81 @@
 			socket.onerror = function(error) {
 			  //alert(`[error] ${error.message}`);
 			};
-			var incoming_msg;
-			socket.onmessage = function(event) {
-				incoming_msg = JSON.parse(event.data); 
-				if (Object.keys(incoming_msg).indexOf("greeting")!=-1) {
-					//alert(incoming_msg["greeting"]);
+			var msg, device_id=0;
+			socket.onmessage = function(event) { 
+				msg = JSON.parse(event.data);  
+				if (msg["msg_type"]=="init") {
+					device_id = msg["device_id"] ; 
+					//alert(msg["msg"]);
+					// console.log("[Init]", msg["device_id"]) 
+				} else if (msg["msg_type"]=="alert") { 
+					if (device_id == msg["device_id"]) {
+						; // console.log("[alert]", event.data) 
+					} else {
+						console.log("[Alert]", event.data)
+						//alert(msg["msg"]);  
+					}
+				} else {
+					console.log("[Broadcast]", event.data, device_id)
 				}
+				
 			};
             document.querySelectorAll('.key').forEach(ele => {
-                ele.addEventListener("click", ()=> {
-					console.log(ele.firstElementChild.className);//
+                ele.addEventListener("click", ()=> { 
+					//console.log(ele.firstElementChild.className);//
+					var keystroke_type = "write";
 					switch(ele.id) {
-					  case "key-num-lock":
-						if (ele.firstElementChild.className == "num-lock-void") {
-							ele.firstElementChild.className = "num-lock-box";
-						} else {
-							ele.firstElementChild.className = "num-lock-void";
-						} 
-						break;
-					  case "key-caps-lock":
-					  case "key-shift-left":
-					  case "key-alt-left":
-					  case "key-ctrl-left":
-						if (ele.firstElementChild.className == "align-left-margin") {
-							ele.firstElementChild.className = "align-left-margin-box";
-						} else {
-							ele.firstElementChild.className = "align-left-margin";
-						}
-					    break;
-					  case "key-shift-right":
-					  case "key-alt-right":
-					  case "key-ctrl-right":
-						if (ele.firstElementChild.className == "align-right-margin") {
-							ele.firstElementChild.className = "align-right-margin-box";
-						} else {
-							ele.firstElementChild.className = "align-right-margin";
-						}
-					    break;
-					  default:
-					    ;// code block
-					}
-					switch(ele.id) {
-					  case "key-caps-lock":
-					  	function_case_switch();
-					    break;
-					  case "key-shift-left":
-					  case "key-shift-right":
-					  	func_shift();
-					    break;
-					  default:
-					    ; 
+						case "key-num-lock":
+							if (ele.firstElementChild.className == "num-lock-void") {
+								ele.firstElementChild.className = "num-lock-box";
+							} else {
+								ele.firstElementChild.className = "num-lock-void";
+							} 
+							break;
+						case "key-shift-left":
+							func_shift_key();
+						case "key-alt-left"  :
+						case "key-ctrl-left" :
+							if (ele.firstElementChild.className == "align-left-margin") {
+								ele.firstElementChild.className = "align-left-margin-box";
+								keystroke_type = "press";
+							} else {
+								ele.firstElementChild.className = "align-left-margin";
+								keystroke_type = "release";
+							}
+							break;
+						case "key-caps-lock" :
+							function_caps_key();
+							if (ele.firstElementChild.className == "align-left-margin") {
+								ele.firstElementChild.className = "align-left-margin-box";
+							} else {
+								ele.firstElementChild.className = "align-left-margin";
+							}
+							break;
+						case "key-shift-right":
+							func_shift_key();
+						case "key-alt-right"  :
+						case "key-ctrl-right" :
+							if (ele.firstElementChild.className == "align-right-margin") {
+								ele.firstElementChild.className = "align-right-margin-box";
+								keystroke_type = "press";
+							} else {
+								ele.firstElementChild.className = "align-right-margin";
+								keystroke_type = "release";
+							}
+							break;
+						default:
+							;// code block
 					}
                     console.log(ele.getAttribute("value"), ele.getAttribute("value_type"));
-					socket.send(JSON.stringify({ 
-						"device_type": "virtual_keyboard",
-						"value": ele.getAttribute("value"),
-						"value_type": ele.getAttribute("value_type")
+					socket.send(JSON.stringify({  
+						"device_type"    : "virtual_keyboard",
+						"value"          : ele.getAttribute("value"),
+						"value_type"     : ele.getAttribute("value_type"),
+						"keystroke_type" : keystroke_type
 					}));
                 });
-            });
-			
-			 
-
-			var reportDragCursorTimerId, cursorX, cursorY, dragCursorTimeoutId, dragCursorTimeoutCleared, dragCursorActive; 
-  
-
-			function reportDragCursor() { 
-				var report = JSON.stringify({ 
-						"device_type": "virtual_mouse",
-						"cursorX": cursorX,
-						"cursorY": cursorY,
-						"dragCursorActive": dragCursorActive
-					})
-				console.log(report);
-				socket.send(report); 
-			}  
-
-			function dragstarted(d) {
-			  	d3.select(this)
-			  	  .raise()
-			  	  .classed("mouse-cursor-active", true);
-				dragCursorActive=false;
-				dragCursorTimeoutCleared=false;
-				CursorX = 0, cursorY = 0;
-				dragCursorTimeoutId = setTimeout(function (){ dragCursorActive = true; }, 50); // by holding on the cursor
-				reportDragCursorTimerId = setInterval(reportDragCursor, 1000); 
-			} 
- 
-			function dragged(d) {
-				if (dragCursorActive || dragCursorTimeoutCleared) {
-					;
-				} else {
-					clearTimeout(dragCursorTimeoutId);
-					dragCursorTimeoutCleared = true;
-					console.log("dragCursorTimeoutCleared") 
-				}  
-
-			  	var obj = keepInCircle(d.dcx, d.dcy, d3.event.x, d3.event.y, 150)  
-			  	d3.select(this)
-			  	  .attr("cx", obj.x)
-			  	  .attr("cy", obj.y);
-
-				if (dragCursorActive) {
-
-				} else { 
-					
-				} 
-			} 
-  
-			function dragended(d) {
-			    d3.select(this)
-				  .attr("cx", d.dcx)
-				  .attr("cy", d.dcy)
-				  .classed("mouse-cursor-active", false); 
-				clearInterval(reportDragCursorTimerId);
-			} 
-
-
-            /*document.querySelectorAll('.mouse-key').forEach(ele => {
-                ele.addEventListener("click", ()=> {
-                    console.log(ele.getAttribute("value"));
-					socket.send(JSON.stringify({ 
-						"device_type": "virtual_keyboard",
-						"value": ele.getAttribute("value"),
-						"value_type": ele.getAttribute("value_type")
-					
-
-				});
-            }); }*/ 
+            }); 
         </script>
     </body>
 </html>
