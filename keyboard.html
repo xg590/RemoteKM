@@ -3,7 +3,7 @@
     <head>
         <style>
             .keyboard-plus-mouse {
-                border: 1px dashed #000000; 
+                border: 1px dashed #000000;
                 justify-content:space-between;
             }
             .keyboard {
@@ -16,16 +16,16 @@
             .main {
                 display:flex;
                 flex-direction:column;
-            } 
+            }
             .shift-display-grey {
                 color:rgb(128, 128, 128);
             }
             .shift-display-white {
                 color:rgb(255, 255, 255);
                 font-weight: bold;
-            } 
+            }
             .letter-display {
-                color:rgb(255, 255, 255); 
+                color:rgb(255, 255, 255);
             }
             .row {
                 display:flex;
@@ -109,8 +109,8 @@
             }
             .align-left-margin-box {
                 margin-left: 9px;
-  				padding: 3px;
-				border: 3px solid rgb(255, 255, 255);
+                padding: 3px;
+                border: 3px solid rgb(255, 255, 255);
             }
             .align-right {
                 align-items: flex-end ;
@@ -120,826 +120,826 @@
             }
             .align-right-margin-box {
                 margin-right: 9px;
-  				padding: 3px;
-				border: 3px solid rgb(255, 255, 255);
+                padding: 3px;
+                border: 3px solid rgb(255, 255, 255);
             }
-            .num-lock-box {  
-				font-size: 0.9em; 
-				border: 3px solid rgb(255, 255, 255);
-            } 
-			
-			.mouse-cursor-active {
-    		  stroke: rgb(0, 0, 0);
-    		  stroke-width: 6px;
-    		} 
-			.mouse-cursor-drag-active {
-    		  stroke: rgb(255, 0, 0);
-    		  stroke-width: 6px;
-    		} 
-        </style> 
-	<script src="https://d3js.org/d3.v4.min.js"></script>
+            .num-lock-box {
+                font-size: 0.9em;
+                border: 3px solid rgb(255, 255, 255);
+            }
+
+            .mouse-cursor-active {
+              stroke: rgb(0, 0, 0);
+              stroke-width: 6px;
+            }
+            .mouse-cursor-drag-active {
+              stroke: rgb(255, 0, 0);
+              stroke-width: 6px;
+            }
+        </style>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
     </head>
-    <body> 
-		<div class="row" id="keyboard-plus-mouse"> 
-			<div class="keyboard">
-				<div class="keyboard-main">
-					<div id="row-esc" class="row" style="margin-bottom:1em;">
-						<div class="key height-full width-full" value_type="int" value="177">
-							<span>Esc</span>
-						</div>
-						<div style="width:2em"></div>
-						<div class="key height-full width-full" value_type="int" value="194">
-							<span>F1</span>
-						</div>
-						<div class="key height-full width-full" value_type="int" value="195">
-							<span>F2</span>
-						</div>
-						<div class="key height-full width-full" value_type="int" value="196">
-							<span>F3</span>
-						</div>
-						<div class="key height-full width-full" value_type="int" value="197">
-							<span>F4</span>
-						</div>
-						<div style="width:2em"></div>
-						<div class="key height-full width-full" value_type="int" value="198">
-							<span>F5</span>
-						</div>
-						<div class="key height-full width-full" value_type="int" value="199">
-							<span>F6</span>
-						</div>
-						<div class="key height-full width-full" value_type="int" value="200">
-							<span>F7</span>
-						</div>
-						<div class="key height-full width-full" value_type="int" value="201">
-							<span>F8</span>
-						</div>
-						<div style="width:2em"></div>
-						<div class="key height-full width-full" value_type="int" value="202">
-							<span>F9</span>
-						</div>
-						<div class="key height-full width-full" value_type="int" value="203">
-							<span>F10</span>
-						</div>
-						<div class="key height-full width-full" value_type="int" value="204">
-							<span>F11</span>
-						</div>
-						<div class="key height-full width-full" value_type="int" value="205">
-							<span>F12</span>
-						</div>
-					</div>
-					<div class="keyboard-main-lower">
-						<div id="row-~" class="row">
-							<div class="key" value_type="string" value="`">
-								<div class="height-half width-full">
-									<span class="shift-display-grey">~</span>
-								</div>
-								<div class="height-half width-full">
-									<span class="shift-display-white">`</span>
-								</div>
-							</div>
-							<div class="key" value_type="string" value="1">
-								<div class="height-half width-full">
-									<span class="shift-display-grey">!</span>
-								</div>
-								<div class="height-half width-full">
-									<span class="shift-display-white">1</span>
-								</div>
-							</div>
-							<div class="key" value_type="string" value="2">
-								<div class="height-half width-full">
-									<span class="shift-display-grey">@</span>
-								</div>
-								<div class="height-half width-full">
-									<span class="shift-display-white">2</span>
-								</div>
-							</div>
-							<div class="key" value_type="string" value="3">
-								<div class="height-half width-full">
-									<span class="shift-display-grey">#</span>
-								</div>
-								<div class="height-half width-full">
-									<span class="shift-display-white">3</span>
-								</div>
-							</div>
-							<div class="key" value_type="string" value="4">
-								<div class="height-half width-full">
-									<span class="shift-display-grey">$</span>
-								</div>
-								<div class="height-half width-full">
-									<span class="shift-display-white">4</span>
-								</div>
-							</div>
-							<div class="key" value_type="string" value="5">
-								<div class="height-half width-full">
-									<span class="shift-display-grey">%</span>
-								</div>
-								<div class="height-half width-full">
-									<span class="shift-display-white">5</span>
-								</div>
-							</div>
-							<div class="key" value_type="string" value="6">
-								<div class="height-half width-full">
-									<span class="shift-display-grey">^</span>
-								</div>
-								<div class="height-half width-full">
-									<span class="shift-display-white">6</span>
-								</div>
-							</div>
-							<div class="key" value_type="string" value="7">
-								<div class="height-half width-full">
-									<span class="shift-display-grey">&</span>
-								</div>
-								<div class="height-half width-full">
-									<span class="shift-display-white">7</span>
-								</div>
-							</div>
-							<div class="key" value_type="string" value="8">
-								<div class="height-half width-full">
-									<span class="shift-display-grey">*</span>
-								</div>
-								<div class="height-half width-full">
-									<span class="shift-display-white">8</span>
-								</div>
-							</div>
-							<div class="key" value_type="string" value="9">
-								<div class="height-half width-full">
-									<span class="shift-display-grey">(</span>
-								</div>
-								<div class="height-half width-full">
-									<span class="shift-display-white">9</span>
-								</div>
-							</div>
-							<div class="key" value_type="string" value="0">
-								<div class="height-half width-full">
-									<span class="shift-display-grey">)</span>
-								</div>
-								<div class="height-half width-full">
-									<span class="shift-display-white">0</span>
-								</div>
-							</div>
-							<div class="key" value_type="string" value="-">
-								<div class="height-half width-full">
-									<span class="shift-display-grey">_</span>
-								</div>
-								<div class="height-half width-full">
-									<span class="shift-display-white">-</span>
-								</div>
-							</div>
-							<div class="key" value_type="string" value="=">
-								<div class="height-half width-full">
-									<span class="shift-display-grey">+</span>
-								</div>
-								<div class="height-half width-full">
-									<span class="shift-display-white">=</span>
-								</div>
-							</div>
-							<div class="key height-full width-backspace" value_type="int" value="178">
-								<span>Backspace</span>
-							</div>
-						</div>
-						<div id="row-tab" class="row">
-							<div class="key height-full width-tab align-left" value_type="int" value="179">
-								<span class="align-left-margin">Tab</span>
-							</div>
-							<div class="key height-full width-full" value_type="string" value="q">
-								<span class="letter-display">q</span>
-							</div>
-							<div class="key height-full width-full" value_type="string" value="w">
-								<span class="letter-display">w</span>
-							</div>
-							<div class="key height-full width-full" value_type="string" value="e">
-								<span class="letter-display">e</span>
-							</div>
-							<div class="key height-full width-full" value_type="string" value="r">
-								<span class="letter-display">r</span>
-							</div>
-							<div class="key height-full width-full" value_type="string" value="t">
-								<span class="letter-display">t</span>
-							</div>
-							<div class="key height-full width-full" value_type="string" value="y">
-								<span class="letter-display">y</span>
-							</div>
-							<div class="key height-full width-full" value_type="string" value="u">
-								<span class="letter-display">u</span>
-							</div>
-							<div class="key height-full width-full" value_type="string" value="i">
-								<span class="letter-display">i</span>
-							</div>
-							<div class="key height-full width-full" value_type="string" value="o">
-								<span class="letter-display">o</span>
-							</div>
-							<div class="key height-full width-full" value_type="string" value="p">
-								<span class="letter-display">p</span>
-							</div>
-							<div class="key" value_type="string" value="[">
-								<div class="height-half width-full">
-									<span class="shift-display-grey">{</span>
-								</div>
-								<div class="height-half width-full">
-									<span class="shift-display-white">[</span>
-								</div>
-							</div>
-							<div class="key" value_type="int" value="]">
-								<div class="height-half width-full">
-									<span class="shift-display-grey">}</span>
-								</div>
-								<div class="height-half width-full">
-									<span class="shift-display-white">]</span>
-								</div>
-							</div>
-							<div class="key" value_type="int" value="\">
-								<div class="height-half width-full">
-									<span class="shift-display-grey">|</span>
-								</div>
-								<div class="height-half width-full">
-									<span class="shift-display-white">\</span>
-								</div>
-							</div>
-						</div>
-						<div id="row-caps" class="row">
-							<div class="key height-full width-caps align-left" value_type="int" value="193" id="key-caps-lock">
-								<span class="align-left-margin">Caps Lock</span>
-							</div>
-							<div class="key height-full width-full" value_type="string" value="a">
-								<span class="letter-display">a</span>
-							</div>
-							<div class="key height-full width-full" value_type="string" value="s">
-								<span class="letter-display">s</span>
-							</div>
-							<div class="key height-full width-full" value_type="string" value="d">
-								<span class="letter-display">d</span>
-							</div>
-							<div class="key height-full width-full" value_type="string" value="f">
-								<span class="letter-display">f</span>
-							</div>
-							<div class="key height-full width-full" value_type="string" value="g">
-								<span class="letter-display">g</span>
-							</div>
-							<div class="key height-full width-full" value_type="string" value="h">
-								<span class="letter-display">h</span>
-							</div>
-							<div class="key height-full width-full" value_type="string" value="j">
-								<span class="letter-display">j</span>
-							</div>
-							<div class="key height-full width-full" value_type="string" value="k">
-								<span class="letter-display">k</span>
-							</div>
-							<div class="key height-full width-full" value_type="string" value="l">
-								<span class="letter-display">l</span>
-							</div>
-							<div class="key" value_type="string" value=";">
-								<div class="height-half width-full">
-									<span class="shift-display-grey">:</span>
-								</div>
-								<div class="height-half width-full">
-									<span class="shift-display-white">;</span>
-								</div>
-							</div>
-							<div class="key" value_type="string" value="'">
-								<div class="height-half width-full">
-									<span class="shift-display-grey">"</span>
-								</div>
-								<div class="height-half width-full">
-									<span class="shift-display-white">'</span>
-								</div>
-							</div>
-							<div class="key height-full width-return align-right" value_type="int" value="176">
-								<span class="align-right-margin">Enter</span>
-							</div>
-						</div>
-						<div id="row-shift" class="row">
-							<div class="key height-full width-shift align-left" value_type="int" value="129" id="key-shift-left">
-								<span class="align-left-margin">Shift</span>
-							</div>
-							<div class="key height-full width-full" value_type="string" value="z">
-								<span class="letter-display">z</span>
-							</div>
-							<div class="key height-full width-full" value_type="string" value="x">
-								<span class="letter-display">x</span>
-							</div>
-							<div class="key height-full width-full" value_type="string" value="c">
-								<span class="letter-display">c</span>
-							</div>
-							<div class="key height-full width-full" value_type="string" value="v">
-								<span class="letter-display">v</span>
-							</div>
-							<div class="key height-full width-full" value_type="string" value="b">
-								<span class="letter-display">b</span>
-							</div>
-							<div class="key height-full width-full" value_type="string" value="n">
-								<span class="letter-display">n</span>
-							</div>
-							<div class="key height-full width-full" value_type="string" value="m">
-								<span class="letter-display">m</span>
-							</div>
-							<div class="key" value_type="string" value=",">
-								<div class="height-half width-full">
-									<span class="shift-display-grey">&lt;</span>
-								</div>
-								<div class="height-half width-full">
-									<span class="shift-display-white">,</span>
-								</div>
-							</div>
-							<div class="key" value_type="string" value=".">
-								<div class="height-half width-full">
-									<span class="shift-display-grey">&gt;</span>
-								</div>
-								<div class="height-half width-full">
-									<span class="shift-display-white">.</span>
-								</div>
-							</div>
-							<div class="key" value_type="string" value="/">
-								<div class="height-half width-full">
-									<span class="shift-display-grey">?</span>
-								</div>
-								<div class="height-half width-full">
-									<span class="shift-display-white">/</span>
-								</div>
-							</div>
-							<div class="key height-full width-shift align-right" value_type="int" value="133" id="key-shift-right">
-								<span class="align-right-margin">Shift</span>
-							</div>
-						</div>
-						<div id="row-ctrl" class="row">
-							<div class="key height-full width-full align-left" value_type="int" value="128" id="key-ctrl-left">
-								<span class="align-left-margin">Ctrl</span>
-							</div>
-							<div class="key height-full width-full" value_type="int" value="131">
-								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 87.3 87.6" width="50%" height="50%" fill="white">
-									<polyline points="0 12.5 35.7 7.6 35.7 42.1 0 42.1"/>
-									<polyline points="40 6.9 87.3 0 87.3 41.8 40 41.8"/>
-									<polyline points="0 45.74 35.7 45.74 35.7 80.34 0 75.34"/>
-									<polyline points="40 46.2 87.3 46.2 87.3 87.6 40 80.9"/>
-								</svg>
-							</div>
-							<div class="key height-full width-alt align-right" value_type="int" value="130" id="key-alt-right">
-								<span class="align-right-margin">Alt</span>
-							</div>
-							<div class="key height-full width-space" value_type="string" value=" ">
-								<span>&nbsp;</span>
-							</div>
-							<div class="key height-full width-alt align-left" value_type="int" value="134" id="key-alt-left">
-								<span class="align-left-margin">Alt</span>
-							</div>
-							<div class="key height-full width-full" value_type="int" value="135">
-								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 87.3 87.6" width="50%" height="50%" fill="white">
-									<polyline points="0 12.5 35.7 7.6 35.7 42.1 0 42.1"/>
-									<polyline points="40 6.9 87.3 0 87.3 41.8 40 41.8"/>
-									<polyline points="0 45.74 35.7 45.74 35.7 80.34 0 75.34"/>
-									<polyline points="40 46.2 87.3 46.2 87.3 87.6 40 80.9"/>
-								</svg>
-							</div>
-							<div class="key height-full width-full" value_type="int" value="237">
-								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56 56" width="60%" height="60%">
-									<g>
-										<path  stroke="white" stroke-width="2" fill="none" d="M28,0C12.561,0,0,12.561,0,28s12.561,28,28,28s28-12.561,28-28S43.439,0,28,0z M28,54C13.663,54,2,42.336,2,28S13.663,2,28,2s26,11.664,26,26S42.337,54,28,54z"/>
-										<path  stroke="white" stroke-width="2" fill="none" d="M40,16H16c-0.553,0-1,0.448-1,1s0.447,1,1,1h24c0.553,0,1-0.448,1-1S40.553,16,40,16z"/>
-										<path  stroke="white" stroke-width="2" fill="none" d="M40,27H16c-0.553,0-1,0.448-1,1s0.447,1,1,1h24c0.553,0,1-0.448,1-1S40.553,27,40,27z"/>
-										<path  stroke="white" stroke-width="2" fill="none" d="M40,38H16c-0.553,0-1,0.448-1,1s0.447,1,1,1h24c0.553,0,1-0.448,1-1S40.553,38,40,38z"/>
-									</g>
-								</svg>
-							</div>
-							<div class="key height-full width-full align-right" value_type="int" value="132" id="key-ctrl-right">
-								<span class="align-right-margin">Ctrl</span>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="keyboard-middle col">
-					<div class="col">
-						<div class="row" style="margin-bottom:1em;">
-							<div class="key height-full width-full" value_type="int" value="206">
-								<span>Print Screen</span>
-							</div>
-							<div class="key height-full width-full" value_type="int" value="207">
-								<span>Scroll Lock</span>
-							</div>
-							<div class="key height-full width-full" value_type="int" value="208">
-								<span>Pause Break</span>
-							</div>
-						</div>
-						<div class="row">
-							<div class="key height-full width-full" value_type="int" value="209">
-								<span>Insert</span>
-							</div>
-							<div class="key height-full width-full" value_type="int" value="210">
-								<span>Home</span>
-							</div>
-							<div class="key height-full width-full" value_type="int" value="211">
-								<span>Page Up</span>
-							</div>
-						</div>
-						<div lass="row">
-							<div class="key height-full width-full" value_type="int" value="212">
-								<span>Delete</span>
-							</div>
-							<div class="key height-full width-full" value_type="int" value="213">
-								<span>End</span>
-							</div>
-							<div class="key height-full width-full" value_type="int" value="214">
-								<span>Page Down</span>
-							</div>
-						</div>
-					</div>
-					<div>
-						<div id="ctrl" class="row">
-							<div class=" height-full width-full"></div>
-							<div class="key height-full width-full" value_type="int" value="218">
-								<span>&#9650;</span>
-							</div>
-							<div class=" height-full width-full"></div>
-						</div>
-						<div id="ctrl" class="row">
-							<div class="key height-full width-full" value_type="int" value="216">
-								<span>&#9664;</span>
-							</div>
-							<div class="key height-full width-full" value_type="int" value="217">
-								<span>&#9660;</span>
-							</div>
-							<div class="key height-full width-full" value_type="int" value="215">
-								<span>&#9654;</span>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="keyboard-numpad row" style="align-items: flex-end">
-					<div class="numpad-right">
-						<div class="row">
-							<div class="key height-full width-full" value_type="int" value="219" id="key-num-lock">
-								<span class="num-lock-void">Num<br>Lock</span> 
-							</div>
-							<div class="key height-full width-full" value_type="int" value="220">
-								<span>/</span>
-							</div>
-							<div class="key height-full width-full" value_type="int" value="221">
-								<span>*</span>
-							</div>
-						</div>
-						<div class="row">
-							<div class="key height-full width-full" value_type="int" value="231">
-								<span>7</span>
-							</div>
-							<div class="key height-full width-full" value_type="int" value="232">
-								<span>8</span>
-							</div>
-							<div class="key height-full width-full" value_type="int" value="233">
-								<span>9</span>
-							</div>
-						</div>
-						<div class="row">
-							<div class="key height-full width-full" value_type="int" value="228">
-								<span>4</span>
-							</div>
-							<div class="key height-full width-full" value_type="int" value="229">
-								<span>5</span>
-							</div>
-							<div class="key height-full width-full" value_type="int" value="230">
-								<span>6</span>
-							</div>
-						</div>
-						<div class="row">
-							<div class="key height-full width-full" value_type="int" value="225">
-								<span>1</span>
-							</div>
-							<div class="key height-full width-full" value_type="int" value="226">
-								<span>2</span>
-							</div>
-							<div class="key height-full width-full" value_type="int" value="227">
-								<span>3</span>
-							</div>
-						</div>
-						<div class="row">
-							<div class="key height-full width-full" value_type="int" value="234">
-								<span>0</span>
-							</div>
-							<div class="key height-full width-double" value_type="int" value="235">
-								<span>.</span>
-							</div>
-						</div>
-					</div>
-					<div class="numpad-right">
-						<div class="col">
-							<div class="key height-full width-full" value_type="int" value="222">
-								<span>-</span>
-							</div>
-							<div class="key height-double width-full" value_type="int" value="223">
-								<span>+</span>
-							</div>
-							<div class="key height-double width-full" value_type="int" value="224">
-								<span>Enter</span>
-							</div>
-						</div>
-					</div>
-				</div> 
-			</div> 
-			<div class="mouse"> 
-				<svg width="300" height="300" style="border: 1px dashed black" > 
-					<g id="mouse-as-whole" transform="translate(0, 0) scale(1 1)"> 
-						<path id="mouse-key-right"  style="fill:#ff0000"                            d="m 150.49046,132.13084 v -1.22221 l 1.07607,-10e-4 c 1.87691,-0.002 2.39368,-0.0899 3.4142,-0.57822 1.25076,-0.59848 2.22092,-1.28843 3.21566,-2.2869 0.975,-0.97867 1.70673,-2.01381 2.33967,-3.30985 0.60827,-1.24552 1.00859,-2.64193 1.1695,-4.07954 0.0887,-0.79246 0.11837,-7.79748 0.0623,-14.71958 l -0.0462,-5.71247 -0.38374,-1.03622 c -0.21106,-0.569919 -0.50175,-1.283361 -0.64598,-1.585427 -0.97425,-2.040461 -2.49919,-3.805646 -4.35615,-5.042409 -0.2192,-0.145991 -0.7635,-0.460077 -1.20955,-0.697969 l -0.81101,-0.432531 h -1.91238 -1.91238 v -1.461331 -1.46133 h 0.52356 c 0.97172,0 5.07349,0.104859 6.30484,0.161179 2.30234,0.105306 3.65889,0.297278 5.63276,0.797123 2.69314,0.681981 4.62463,1.389104 6.96125,2.548529 3.30563,1.640241 6.0326,3.609095 8.71797,6.294315 2.52291,2.522781 4.18755,4.797271 5.8596,8.006341 1.73919,3.33792 3.02772,7.26264 3.43499,10.46261 0.18157,1.42664 0.29684,5.21755 0.43182,14.20148 l 0.0357,2.37798 H 169.4417 150.49044 Z" /> 
-						<path id="mouse-itself"     style="fill:#ffff00"                            d="m 139.78199,211.14126 c -4.33684,-0.61608 -9.99098,-2.96863 -14.01841,-5.83272 -6.1818,-4.39616 -10.99519,-11.43455 -12.86755,-18.81562 -0.71656,-2.82477 -0.72115,-2.94819 -0.94019,-25.292 l -0.22011,-22.45339 H 150 188.26427 l -0.16538,22.31965 -0.16539,22.31964 -0.75571,2.90668 c -2.40721,9.25875 -8.33489,16.88067 -16.59231,21.33466 -2.81134,1.51642 -6.68879,2.84353 -9.98995,3.41921 -2.91447,0.50824 -17.43564,0.57375 -20.81354,0.0939 z" /> 
-						<path id="mouse-frame"      style="fill:#000000"                            d="m 140.66758,216.48228 c -10.24485,-1.15183 -20.02284,-6.77345 -26.24224,-15.08731 -3.33375,-4.45644 -5.81388,-9.88995 -6.84381,-14.99354 -0.86451,-4.28387 -0.84329,-3.36613 -0.84329,-36.47165 0,-29.23526 0.0223,-31.49772 0.32963,-33.4696 1.36348,-8.74791 4.92116,-15.84565 10.97201,-21.889715 6.13478,-6.127883 13.95995,-9.935644 22.44791,-10.923243 3.4944,-0.406584 15.62287,-0.406584 19.11727,0 8.47321,0.985883 16.32786,4.808161 22.44689,10.923243 5.90334,5.899525 9.63134,13.261525 10.85181,21.429975 0.34296,2.29537 0.35724,3.6482 0.35805,33.93416 5.2e-4,20.95013 -0.0641,32.06681 -0.19249,33.1018 -0.52222,4.20908 -1.71258,8.22695 -3.56721,12.04055 -5.79441,11.91484 -17.21867,19.98872 -30.29947,21.41359 -2.08753,0.22739 -16.49617,0.22097 -18.53506,-0.008 z m 17.79946,-4.957 c 7.89017,-0.85948 14.63418,-4.07853 20.18364,-9.63406 4.77603,-4.78127 7.88472,-10.71305 9.20922,-17.57236 0.31349,-1.62351 0.34129,-3.30415 0.3931,-23.76892 l 0.0557,-22.02189 h -38.2629 -38.26294 l 0.0599,22.20578 0.06,22.2058 0.49269,2.21956 c 1.61786,7.28839 5.23686,13.50793 10.61025,18.23452 5.02023,4.41596 11.32039,7.26185 17.81867,8.04901 2.45327,0.29717 15.12795,0.35648 17.64268,0.0825 z m 29.83035,-85.18536 c 0,-8.61223 -0.26602,-11.06601 -1.65436,-15.26034 -0.70066,-2.11677 -2.61322,-6.02775 -3.85451,-7.88208 -5.6389,-8.423772 -14.56976,-13.72356 -24.7425,-14.682786 -2.62722,-0.247731 -13.36768,-0.245416 -16.09115,0.0035 -13.98077,1.277635 -25.61919,11.160105 -29.15085,24.752696 -0.85883,3.30548 -1.00856,5.22682 -1.00856,12.94227 v 7.16573 h 38.25096 38.25097 z" /> 
-						<path id="mouse-key-left"   style="fill:#00ff00" transform="translate(0,0)" d="m 111.97538,130.78031 c 0.002,-4.22841 0.14151,-12.4977 0.22796,-13.54584 0.27395,-3.32145 1.97807,-8.34719 4.05161,-11.9489 1.59161,-2.76461 3.1124,-4.73879 5.4449,-7.068173 2.6836,-2.680014 5.0554,-4.393273 8.4229,-6.084243 2.91123,-1.461862 5.55449,-2.385247 8.60015,-3.004339 1.85202,-0.376461 3.10692,-0.460669 8.92865,-0.599138 l 1.74725,-0.04156 v 1.466111 1.466111 h -1.89217 -1.89216 l -0.98233,0.52597 c -1.24176,0.664871 -2.05969,1.279616 -3.01369,2.265042 -1.54691,1.597875 -2.74409,3.658612 -3.15514,5.431021 -0.19376,0.835498 -0.25944,3.812378 -0.25962,11.767948 -2.2e-4,10.68818 0.0361,11.11866 1.12737,13.33918 0.55913,1.13777 1.21134,2.01085 2.36081,3.16033 1.13361,1.1336 1.96947,1.75865 3.31064,2.47564 l 1.0521,0.56246 1.67209,7.5e-4 1.6721,7.5e-4 v 1.2024 1.20241 h -18.71243 -18.71242 l 0.001,-2.5739 z" /> 
-						<path id="mouse-key-middle" style="fill:#0000ff" transform="translate(0,0)" d="m 144.61847,130.14225 c -1.88905,-0.99068 -4.2408,-3.34605 -5.13359,-5.14151 -1.25774,-2.52943 -1.27523,-2.71966 -1.27523,-13.86768 0,-6.55221 0.0787,-10.50009 0.22318,-11.198158 0.622,-3.00476 3.13596,-6.33586 5.86319,-7.768982 l 1.39924,-0.735273 h 4.273 4.27301 l 1.18184,0.621684 c 2.57894,1.356591 4.68369,3.822771 5.72496,6.708041 l 0.54879,1.520568 0.0691,9.9482 c 0.0596,8.58333 0.0236,10.17298 -0.26277,11.58647 -0.77085,3.80428 -3.34046,7.07095 -6.7687,8.60481 -1.00699,0.45056 -1.31139,0.48014 -4.88292,0.47461 l -3.80898,-0.006 z" /> 
-					</g>
-					<circle cx="150" cy="150" r="3" style="display:none;fill:rgb(0, 0, 0)"/>
-				</svg>  
-			</div> 
-		</div>
+    <body>
+        <div class="row" id="keyboard-plus-mouse">
+            <div class="keyboard">
+                <div class="keyboard-main">
+                    <div id="row-esc" class="row" style="margin-bottom:1em;">
+                        <div class="key height-full width-full" value_type="int" value="177">
+                            <span>Esc</span>
+                        </div>
+                        <div style="width:2em"></div>
+                        <div class="key height-full width-full" value_type="int" value="194">
+                            <span>F1</span>
+                        </div>
+                        <div class="key height-full width-full" value_type="int" value="195">
+                            <span>F2</span>
+                        </div>
+                        <div class="key height-full width-full" value_type="int" value="196">
+                            <span>F3</span>
+                        </div>
+                        <div class="key height-full width-full" value_type="int" value="197">
+                            <span>F4</span>
+                        </div>
+                        <div style="width:2em"></div>
+                        <div class="key height-full width-full" value_type="int" value="198">
+                            <span>F5</span>
+                        </div>
+                        <div class="key height-full width-full" value_type="int" value="199">
+                            <span>F6</span>
+                        </div>
+                        <div class="key height-full width-full" value_type="int" value="200">
+                            <span>F7</span>
+                        </div>
+                        <div class="key height-full width-full" value_type="int" value="201">
+                            <span>F8</span>
+                        </div>
+                        <div style="width:2em"></div>
+                        <div class="key height-full width-full" value_type="int" value="202">
+                            <span>F9</span>
+                        </div>
+                        <div class="key height-full width-full" value_type="int" value="203">
+                            <span>F10</span>
+                        </div>
+                        <div class="key height-full width-full" value_type="int" value="204">
+                            <span>F11</span>
+                        </div>
+                        <div class="key height-full width-full" value_type="int" value="205">
+                            <span>F12</span>
+                        </div>
+                    </div>
+                    <div class="keyboard-main-lower">
+                        <div id="row-~" class="row">
+                            <div class="key" value_type="string" value="`">
+                                <div class="height-half width-full">
+                                    <span class="shift-display-grey">~</span>
+                                </div>
+                                <div class="height-half width-full">
+                                    <span class="shift-display-white">`</span>
+                                </div>
+                            </div>
+                            <div class="key" value_type="string" value="1">
+                                <div class="height-half width-full">
+                                    <span class="shift-display-grey">!</span>
+                                </div>
+                                <div class="height-half width-full">
+                                    <span class="shift-display-white">1</span>
+                                </div>
+                            </div>
+                            <div class="key" value_type="string" value="2">
+                                <div class="height-half width-full">
+                                    <span class="shift-display-grey">@</span>
+                                </div>
+                                <div class="height-half width-full">
+                                    <span class="shift-display-white">2</span>
+                                </div>
+                            </div>
+                            <div class="key" value_type="string" value="3">
+                                <div class="height-half width-full">
+                                    <span class="shift-display-grey">#</span>
+                                </div>
+                                <div class="height-half width-full">
+                                    <span class="shift-display-white">3</span>
+                                </div>
+                            </div>
+                            <div class="key" value_type="string" value="4">
+                                <div class="height-half width-full">
+                                    <span class="shift-display-grey">$</span>
+                                </div>
+                                <div class="height-half width-full">
+                                    <span class="shift-display-white">4</span>
+                                </div>
+                            </div>
+                            <div class="key" value_type="string" value="5">
+                                <div class="height-half width-full">
+                                    <span class="shift-display-grey">%</span>
+                                </div>
+                                <div class="height-half width-full">
+                                    <span class="shift-display-white">5</span>
+                                </div>
+                            </div>
+                            <div class="key" value_type="string" value="6">
+                                <div class="height-half width-full">
+                                    <span class="shift-display-grey">^</span>
+                                </div>
+                                <div class="height-half width-full">
+                                    <span class="shift-display-white">6</span>
+                                </div>
+                            </div>
+                            <div class="key" value_type="string" value="7">
+                                <div class="height-half width-full">
+                                    <span class="shift-display-grey">&</span>
+                                </div>
+                                <div class="height-half width-full">
+                                    <span class="shift-display-white">7</span>
+                                </div>
+                            </div>
+                            <div class="key" value_type="string" value="8">
+                                <div class="height-half width-full">
+                                    <span class="shift-display-grey">*</span>
+                                </div>
+                                <div class="height-half width-full">
+                                    <span class="shift-display-white">8</span>
+                                </div>
+                            </div>
+                            <div class="key" value_type="string" value="9">
+                                <div class="height-half width-full">
+                                    <span class="shift-display-grey">(</span>
+                                </div>
+                                <div class="height-half width-full">
+                                    <span class="shift-display-white">9</span>
+                                </div>
+                            </div>
+                            <div class="key" value_type="string" value="0">
+                                <div class="height-half width-full">
+                                    <span class="shift-display-grey">)</span>
+                                </div>
+                                <div class="height-half width-full">
+                                    <span class="shift-display-white">0</span>
+                                </div>
+                            </div>
+                            <div class="key" value_type="string" value="-">
+                                <div class="height-half width-full">
+                                    <span class="shift-display-grey">_</span>
+                                </div>
+                                <div class="height-half width-full">
+                                    <span class="shift-display-white">-</span>
+                                </div>
+                            </div>
+                            <div class="key" value_type="string" value="=">
+                                <div class="height-half width-full">
+                                    <span class="shift-display-grey">+</span>
+                                </div>
+                                <div class="height-half width-full">
+                                    <span class="shift-display-white">=</span>
+                                </div>
+                            </div>
+                            <div class="key height-full width-backspace" value_type="int" value="178">
+                                <span>Backspace</span>
+                            </div>
+                        </div>
+                        <div id="row-tab" class="row">
+                            <div class="key height-full width-tab align-left" value_type="int" value="179">
+                                <span class="align-left-margin">Tab</span>
+                            </div>
+                            <div class="key height-full width-full" value_type="string" value="q">
+                                <span class="letter-display">q</span>
+                            </div>
+                            <div class="key height-full width-full" value_type="string" value="w">
+                                <span class="letter-display">w</span>
+                            </div>
+                            <div class="key height-full width-full" value_type="string" value="e">
+                                <span class="letter-display">e</span>
+                            </div>
+                            <div class="key height-full width-full" value_type="string" value="r">
+                                <span class="letter-display">r</span>
+                            </div>
+                            <div class="key height-full width-full" value_type="string" value="t">
+                                <span class="letter-display">t</span>
+                            </div>
+                            <div class="key height-full width-full" value_type="string" value="y">
+                                <span class="letter-display">y</span>
+                            </div>
+                            <div class="key height-full width-full" value_type="string" value="u">
+                                <span class="letter-display">u</span>
+                            </div>
+                            <div class="key height-full width-full" value_type="string" value="i">
+                                <span class="letter-display">i</span>
+                            </div>
+                            <div class="key height-full width-full" value_type="string" value="o">
+                                <span class="letter-display">o</span>
+                            </div>
+                            <div class="key height-full width-full" value_type="string" value="p">
+                                <span class="letter-display">p</span>
+                            </div>
+                            <div class="key" value_type="string" value="[">
+                                <div class="height-half width-full">
+                                    <span class="shift-display-grey">{</span>
+                                </div>
+                                <div class="height-half width-full">
+                                    <span class="shift-display-white">[</span>
+                                </div>
+                            </div>
+                            <div class="key" value_type="int" value="]">
+                                <div class="height-half width-full">
+                                    <span class="shift-display-grey">}</span>
+                                </div>
+                                <div class="height-half width-full">
+                                    <span class="shift-display-white">]</span>
+                                </div>
+                            </div>
+                            <div class="key" value_type="int" value="\">
+                                <div class="height-half width-full">
+                                    <span class="shift-display-grey">|</span>
+                                </div>
+                                <div class="height-half width-full">
+                                    <span class="shift-display-white">\</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="row-caps" class="row">
+                            <div class="key height-full width-caps align-left" value_type="int" value="193" id="key-caps-lock">
+                                <span class="align-left-margin">Caps Lock</span>
+                            </div>
+                            <div class="key height-full width-full" value_type="string" value="a">
+                                <span class="letter-display">a</span>
+                            </div>
+                            <div class="key height-full width-full" value_type="string" value="s">
+                                <span class="letter-display">s</span>
+                            </div>
+                            <div class="key height-full width-full" value_type="string" value="d">
+                                <span class="letter-display">d</span>
+                            </div>
+                            <div class="key height-full width-full" value_type="string" value="f">
+                                <span class="letter-display">f</span>
+                            </div>
+                            <div class="key height-full width-full" value_type="string" value="g">
+                                <span class="letter-display">g</span>
+                            </div>
+                            <div class="key height-full width-full" value_type="string" value="h">
+                                <span class="letter-display">h</span>
+                            </div>
+                            <div class="key height-full width-full" value_type="string" value="j">
+                                <span class="letter-display">j</span>
+                            </div>
+                            <div class="key height-full width-full" value_type="string" value="k">
+                                <span class="letter-display">k</span>
+                            </div>
+                            <div class="key height-full width-full" value_type="string" value="l">
+                                <span class="letter-display">l</span>
+                            </div>
+                            <div class="key" value_type="string" value=";">
+                                <div class="height-half width-full">
+                                    <span class="shift-display-grey">:</span>
+                                </div>
+                                <div class="height-half width-full">
+                                    <span class="shift-display-white">;</span>
+                                </div>
+                            </div>
+                            <div class="key" value_type="string" value="'">
+                                <div class="height-half width-full">
+                                    <span class="shift-display-grey">"</span>
+                                </div>
+                                <div class="height-half width-full">
+                                    <span class="shift-display-white">'</span>
+                                </div>
+                            </div>
+                            <div class="key height-full width-return align-right" value_type="int" value="176">
+                                <span class="align-right-margin">Enter</span>
+                            </div>
+                        </div>
+                        <div id="row-shift" class="row">
+                            <div class="key height-full width-shift align-left" value_type="int" value="129" id="key-shift-left">
+                                <span class="align-left-margin">Shift</span>
+                            </div>
+                            <div class="key height-full width-full" value_type="string" value="z">
+                                <span class="letter-display">z</span>
+                            </div>
+                            <div class="key height-full width-full" value_type="string" value="x">
+                                <span class="letter-display">x</span>
+                            </div>
+                            <div class="key height-full width-full" value_type="string" value="c">
+                                <span class="letter-display">c</span>
+                            </div>
+                            <div class="key height-full width-full" value_type="string" value="v">
+                                <span class="letter-display">v</span>
+                            </div>
+                            <div class="key height-full width-full" value_type="string" value="b">
+                                <span class="letter-display">b</span>
+                            </div>
+                            <div class="key height-full width-full" value_type="string" value="n">
+                                <span class="letter-display">n</span>
+                            </div>
+                            <div class="key height-full width-full" value_type="string" value="m">
+                                <span class="letter-display">m</span>
+                            </div>
+                            <div class="key" value_type="string" value=",">
+                                <div class="height-half width-full">
+                                    <span class="shift-display-grey">&lt;</span>
+                                </div>
+                                <div class="height-half width-full">
+                                    <span class="shift-display-white">,</span>
+                                </div>
+                            </div>
+                            <div class="key" value_type="string" value=".">
+                                <div class="height-half width-full">
+                                    <span class="shift-display-grey">&gt;</span>
+                                </div>
+                                <div class="height-half width-full">
+                                    <span class="shift-display-white">.</span>
+                                </div>
+                            </div>
+                            <div class="key" value_type="string" value="/">
+                                <div class="height-half width-full">
+                                    <span class="shift-display-grey">?</span>
+                                </div>
+                                <div class="height-half width-full">
+                                    <span class="shift-display-white">/</span>
+                                </div>
+                            </div>
+                            <div class="key height-full width-shift align-right" value_type="int" value="133" id="key-shift-right">
+                                <span class="align-right-margin">Shift</span>
+                            </div>
+                        </div>
+                        <div id="row-ctrl" class="row">
+                            <div class="key height-full width-full align-left" value_type="int" value="128" id="key-ctrl-left">
+                                <span class="align-left-margin">Ctrl</span>
+                            </div>
+                            <div class="key height-full width-full" value_type="int" value="131">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 87.3 87.6" width="50%" height="50%" fill="white">
+                                    <polyline points="0 12.5 35.7 7.6 35.7 42.1 0 42.1"/>
+                                    <polyline points="40 6.9 87.3 0 87.3 41.8 40 41.8"/>
+                                    <polyline points="0 45.74 35.7 45.74 35.7 80.34 0 75.34"/>
+                                    <polyline points="40 46.2 87.3 46.2 87.3 87.6 40 80.9"/>
+                                </svg>
+                            </div>
+                            <div class="key height-full width-alt align-right" value_type="int" value="130" id="key-alt-right">
+                                <span class="align-right-margin">Alt</span>
+                            </div>
+                            <div class="key height-full width-space" value_type="string" value=" ">
+                                <span>&nbsp;</span>
+                            </div>
+                            <div class="key height-full width-alt align-left" value_type="int" value="134" id="key-alt-left">
+                                <span class="align-left-margin">Alt</span>
+                            </div>
+                            <div class="key height-full width-full" value_type="int" value="135">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 87.3 87.6" width="50%" height="50%" fill="white">
+                                    <polyline points="0 12.5 35.7 7.6 35.7 42.1 0 42.1"/>
+                                    <polyline points="40 6.9 87.3 0 87.3 41.8 40 41.8"/>
+                                    <polyline points="0 45.74 35.7 45.74 35.7 80.34 0 75.34"/>
+                                    <polyline points="40 46.2 87.3 46.2 87.3 87.6 40 80.9"/>
+                                </svg>
+                            </div>
+                            <div class="key height-full width-full" value_type="int" value="237">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56 56" width="60%" height="60%">
+                                    <g>
+                                        <path  stroke="white" stroke-width="2" fill="none" d="M28,0C12.561,0,0,12.561,0,28s12.561,28,28,28s28-12.561,28-28S43.439,0,28,0z M28,54C13.663,54,2,42.336,2,28S13.663,2,28,2s26,11.664,26,26S42.337,54,28,54z"/>
+                                        <path  stroke="white" stroke-width="2" fill="none" d="M40,16H16c-0.553,0-1,0.448-1,1s0.447,1,1,1h24c0.553,0,1-0.448,1-1S40.553,16,40,16z"/>
+                                        <path  stroke="white" stroke-width="2" fill="none" d="M40,27H16c-0.553,0-1,0.448-1,1s0.447,1,1,1h24c0.553,0,1-0.448,1-1S40.553,27,40,27z"/>
+                                        <path  stroke="white" stroke-width="2" fill="none" d="M40,38H16c-0.553,0-1,0.448-1,1s0.447,1,1,1h24c0.553,0,1-0.448,1-1S40.553,38,40,38z"/>
+                                    </g>
+                                </svg>
+                            </div>
+                            <div class="key height-full width-full align-right" value_type="int" value="132" id="key-ctrl-right">
+                                <span class="align-right-margin">Ctrl</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="keyboard-middle col">
+                    <div class="col">
+                        <div class="row" style="margin-bottom:1em;">
+                            <div class="key height-full width-full" value_type="int" value="206">
+                                <span>Print Screen</span>
+                            </div>
+                            <div class="key height-full width-full" value_type="int" value="207">
+                                <span>Scroll Lock</span>
+                            </div>
+                            <div class="key height-full width-full" value_type="int" value="208">
+                                <span>Pause Break</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="key height-full width-full" value_type="int" value="209">
+                                <span>Insert</span>
+                            </div>
+                            <div class="key height-full width-full" value_type="int" value="210">
+                                <span>Home</span>
+                            </div>
+                            <div class="key height-full width-full" value_type="int" value="211">
+                                <span>Page Up</span>
+                            </div>
+                        </div>
+                        <div lass="row">
+                            <div class="key height-full width-full" value_type="int" value="212">
+                                <span>Delete</span>
+                            </div>
+                            <div class="key height-full width-full" value_type="int" value="213">
+                                <span>End</span>
+                            </div>
+                            <div class="key height-full width-full" value_type="int" value="214">
+                                <span>Page Down</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div id="ctrl" class="row">
+                            <div class=" height-full width-full"></div>
+                            <div class="key height-full width-full" value_type="int" value="218">
+                                <span>&#9650;</span>
+                            </div>
+                            <div class=" height-full width-full"></div>
+                        </div>
+                        <div id="ctrl" class="row">
+                            <div class="key height-full width-full" value_type="int" value="216">
+                                <span>&#9664;</span>
+                            </div>
+                            <div class="key height-full width-full" value_type="int" value="217">
+                                <span>&#9660;</span>
+                            </div>
+                            <div class="key height-full width-full" value_type="int" value="215">
+                                <span>&#9654;</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="keyboard-numpad row" style="align-items: flex-end">
+                    <div class="numpad-right">
+                        <div class="row">
+                            <div class="key height-full width-full" value_type="int" value="219" id="key-num-lock">
+                                <span class="num-lock-void">Num<br>Lock</span>
+                            </div>
+                            <div class="key height-full width-full" value_type="int" value="220">
+                                <span>/</span>
+                            </div>
+                            <div class="key height-full width-full" value_type="int" value="221">
+                                <span>*</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="key height-full width-full" value_type="int" value="231">
+                                <span>7</span>
+                            </div>
+                            <div class="key height-full width-full" value_type="int" value="232">
+                                <span>8</span>
+                            </div>
+                            <div class="key height-full width-full" value_type="int" value="233">
+                                <span>9</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="key height-full width-full" value_type="int" value="228">
+                                <span>4</span>
+                            </div>
+                            <div class="key height-full width-full" value_type="int" value="229">
+                                <span>5</span>
+                            </div>
+                            <div class="key height-full width-full" value_type="int" value="230">
+                                <span>6</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="key height-full width-full" value_type="int" value="225">
+                                <span>1</span>
+                            </div>
+                            <div class="key height-full width-full" value_type="int" value="226">
+                                <span>2</span>
+                            </div>
+                            <div class="key height-full width-full" value_type="int" value="227">
+                                <span>3</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="key height-full width-full" value_type="int" value="234">
+                                <span>0</span>
+                            </div>
+                            <div class="key height-full width-double" value_type="int" value="235">
+                                <span>.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="numpad-right">
+                        <div class="col">
+                            <div class="key height-full width-full" value_type="int" value="222">
+                                <span>-</span>
+                            </div>
+                            <div class="key height-double width-full" value_type="int" value="223">
+                                <span>+</span>
+                            </div>
+                            <div class="key height-double width-full" value_type="int" value="224">
+                                <span>Enter</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mouse">
+                <svg width="300" height="300" style="border: 1px dashed black" >
+                    <g id="mouse-as-whole" transform="translate(0, 0) scale(1 1)">
+                        <path id="mouse-key-right"  style="fill:#ff0000"                            d="m 150.49046,132.13084 v -1.22221 l 1.07607,-10e-4 c 1.87691,-0.002 2.39368,-0.0899 3.4142,-0.57822 1.25076,-0.59848 2.22092,-1.28843 3.21566,-2.2869 0.975,-0.97867 1.70673,-2.01381 2.33967,-3.30985 0.60827,-1.24552 1.00859,-2.64193 1.1695,-4.07954 0.0887,-0.79246 0.11837,-7.79748 0.0623,-14.71958 l -0.0462,-5.71247 -0.38374,-1.03622 c -0.21106,-0.569919 -0.50175,-1.283361 -0.64598,-1.585427 -0.97425,-2.040461 -2.49919,-3.805646 -4.35615,-5.042409 -0.2192,-0.145991 -0.7635,-0.460077 -1.20955,-0.697969 l -0.81101,-0.432531 h -1.91238 -1.91238 v -1.461331 -1.46133 h 0.52356 c 0.97172,0 5.07349,0.104859 6.30484,0.161179 2.30234,0.105306 3.65889,0.297278 5.63276,0.797123 2.69314,0.681981 4.62463,1.389104 6.96125,2.548529 3.30563,1.640241 6.0326,3.609095 8.71797,6.294315 2.52291,2.522781 4.18755,4.797271 5.8596,8.006341 1.73919,3.33792 3.02772,7.26264 3.43499,10.46261 0.18157,1.42664 0.29684,5.21755 0.43182,14.20148 l 0.0357,2.37798 H 169.4417 150.49044 Z" />
+                        <path id="mouse-itself"     style="fill:#ffff00"                            d="m 139.78199,211.14126 c -4.33684,-0.61608 -9.99098,-2.96863 -14.01841,-5.83272 -6.1818,-4.39616 -10.99519,-11.43455 -12.86755,-18.81562 -0.71656,-2.82477 -0.72115,-2.94819 -0.94019,-25.292 l -0.22011,-22.45339 H 150 188.26427 l -0.16538,22.31965 -0.16539,22.31964 -0.75571,2.90668 c -2.40721,9.25875 -8.33489,16.88067 -16.59231,21.33466 -2.81134,1.51642 -6.68879,2.84353 -9.98995,3.41921 -2.91447,0.50824 -17.43564,0.57375 -20.81354,0.0939 z" />
+                        <path id="mouse-frame"      style="fill:#000000"                            d="m 140.66758,216.48228 c -10.24485,-1.15183 -20.02284,-6.77345 -26.24224,-15.08731 -3.33375,-4.45644 -5.81388,-9.88995 -6.84381,-14.99354 -0.86451,-4.28387 -0.84329,-3.36613 -0.84329,-36.47165 0,-29.23526 0.0223,-31.49772 0.32963,-33.4696 1.36348,-8.74791 4.92116,-15.84565 10.97201,-21.889715 6.13478,-6.127883 13.95995,-9.935644 22.44791,-10.923243 3.4944,-0.406584 15.62287,-0.406584 19.11727,0 8.47321,0.985883 16.32786,4.808161 22.44689,10.923243 5.90334,5.899525 9.63134,13.261525 10.85181,21.429975 0.34296,2.29537 0.35724,3.6482 0.35805,33.93416 5.2e-4,20.95013 -0.0641,32.06681 -0.19249,33.1018 -0.52222,4.20908 -1.71258,8.22695 -3.56721,12.04055 -5.79441,11.91484 -17.21867,19.98872 -30.29947,21.41359 -2.08753,0.22739 -16.49617,0.22097 -18.53506,-0.008 z m 17.79946,-4.957 c 7.89017,-0.85948 14.63418,-4.07853 20.18364,-9.63406 4.77603,-4.78127 7.88472,-10.71305 9.20922,-17.57236 0.31349,-1.62351 0.34129,-3.30415 0.3931,-23.76892 l 0.0557,-22.02189 h -38.2629 -38.26294 l 0.0599,22.20578 0.06,22.2058 0.49269,2.21956 c 1.61786,7.28839 5.23686,13.50793 10.61025,18.23452 5.02023,4.41596 11.32039,7.26185 17.81867,8.04901 2.45327,0.29717 15.12795,0.35648 17.64268,0.0825 z m 29.83035,-85.18536 c 0,-8.61223 -0.26602,-11.06601 -1.65436,-15.26034 -0.70066,-2.11677 -2.61322,-6.02775 -3.85451,-7.88208 -5.6389,-8.423772 -14.56976,-13.72356 -24.7425,-14.682786 -2.62722,-0.247731 -13.36768,-0.245416 -16.09115,0.0035 -13.98077,1.277635 -25.61919,11.160105 -29.15085,24.752696 -0.85883,3.30548 -1.00856,5.22682 -1.00856,12.94227 v 7.16573 h 38.25096 38.25097 z" />
+                        <path id="mouse-key-left"   style="fill:#00ff00" transform="translate(0,0)" d="m 111.97538,130.78031 c 0.002,-4.22841 0.14151,-12.4977 0.22796,-13.54584 0.27395,-3.32145 1.97807,-8.34719 4.05161,-11.9489 1.59161,-2.76461 3.1124,-4.73879 5.4449,-7.068173 2.6836,-2.680014 5.0554,-4.393273 8.4229,-6.084243 2.91123,-1.461862 5.55449,-2.385247 8.60015,-3.004339 1.85202,-0.376461 3.10692,-0.460669 8.92865,-0.599138 l 1.74725,-0.04156 v 1.466111 1.466111 h -1.89217 -1.89216 l -0.98233,0.52597 c -1.24176,0.664871 -2.05969,1.279616 -3.01369,2.265042 -1.54691,1.597875 -2.74409,3.658612 -3.15514,5.431021 -0.19376,0.835498 -0.25944,3.812378 -0.25962,11.767948 -2.2e-4,10.68818 0.0361,11.11866 1.12737,13.33918 0.55913,1.13777 1.21134,2.01085 2.36081,3.16033 1.13361,1.1336 1.96947,1.75865 3.31064,2.47564 l 1.0521,0.56246 1.67209,7.5e-4 1.6721,7.5e-4 v 1.2024 1.20241 h -18.71243 -18.71242 l 0.001,-2.5739 z" />
+                        <path id="mouse-key-middle" style="fill:#0000ff" transform="translate(0,0)" d="m 144.61847,130.14225 c -1.88905,-0.99068 -4.2408,-3.34605 -5.13359,-5.14151 -1.25774,-2.52943 -1.27523,-2.71966 -1.27523,-13.86768 0,-6.55221 0.0787,-10.50009 0.22318,-11.198158 0.622,-3.00476 3.13596,-6.33586 5.86319,-7.768982 l 1.39924,-0.735273 h 4.273 4.27301 l 1.18184,0.621684 c 2.57894,1.356591 4.68369,3.822771 5.72496,6.708041 l 0.54879,1.520568 0.0691,9.9482 c 0.0596,8.58333 0.0236,10.17298 -0.26277,11.58647 -0.77085,3.80428 -3.34046,7.07095 -6.7687,8.60481 -1.00699,0.45056 -1.31139,0.48014 -4.88292,0.47461 l -3.80898,-0.006 z" />
+                    </g>
+                    <circle cx="150" cy="150" r="3" style="display:none;fill:rgb(0, 0, 0)"/>
+                </svg>
+            </div>
+        </div>
 
-		<script type="text/javascript"> 
-			var mouseKeyId=null, mouseKeyValue=0, originalX=0, originalY=0, dx=0, dy=0, reportMouseEventTimerId=0, reportMouseEvent='', reportMouseEventInterval=75; 
-			 
-			document.getElementById("mouse-key-right").addEventListener("click", (evt)=>{ 
-				document.getElementById("mouse-key-left" ).style.display = "none"; 
-				document.getElementById("mouse-key-middle").style.display = "none"; 
-				setTimeout(()=>{
-					document.getElementById("mouse-key-left" ).style.display = "initial";  
-					document.getElementById("mouse-key-middle").style.display = "initial";
-				}, 100);
-				socket.send(JSON.stringify({
-					"device_type" : "virtual_mouse"  , 
-					"device_id"   : device_id        ,
-					"key_type"    : "mouse-key-right",  
-					"value"       : 2                ,  
-					"mouse_event" : "click"          , 
-			  	}));   
-				
-				  socket.send(JSON.stringify({  
-						"device_type"    : "virtual_keyboard",
-						"value"          : "78",
-						"value_type"     : "int",
-						"keystroke_type" : "xxx"
-					}));
-			}); 
+        <script type="text/javascript">
+            var mouseKeyId=null, mouseKeyValue=0, originalX=0, originalY=0, dx=0, dy=0, reportMouseEventTimerId=0, reportMouseEvent='', reportMouseEventInterval=75;
 
-			function xyz_modifier(x) {
-				x = x + 128;
-				if (x>255) {
-					return 255
-				} else if (x<0) {
-					return 0
-				} else {
-					return Math.floor(x)
-				}
-			}
+            document.getElementById("mouse-key-right").addEventListener("click", (evt)=>{
+                document.getElementById("mouse-key-left" ).style.display = "none";
+                document.getElementById("mouse-key-middle").style.display = "none";
+                setTimeout(()=>{
+                    document.getElementById("mouse-key-left" ).style.display = "initial";
+                    document.getElementById("mouse-key-middle").style.display = "initial";
+                }, 100);
+                socket.send(JSON.stringify({
+                    "device_type" : "virtual_mouse"  ,
+                    "device_id"   : device_id        ,
+                    "key_type"    : "mouse-key-right",
+                    "value"       : 2                ,
+                    "mouse_event" : "click"          ,
+                }));
 
-			function draggingMouseXY (evt) {
-				dx = evt.clientX-originalX,
-				dy = evt.clientY-originalY;
-				document.getElementById(mouseKeyId).transform.baseVal.getItem(0).setTranslate(dx,dy);  
-				reportMouseEvent = JSON.stringify({ 
-					"device_type": "virtual_mouse", 
-					"device_id"  : device_id      ,
-					"key_type"   : mouseKeyId,
-					"mouse_event": "mousemove",
-					"dx": xyz_modifier(dx), "dy": xyz_modifier(dy), "dz": 128, 
-			  	});  
-				if (reportMouseEventTimerId==0) {
-					reportMouseEventTimerId = setInterval(()=>{socket.send(reportMouseEvent);}, reportMouseEventInterval);
-				} 
-			} 
+                  socket.send(JSON.stringify({
+                        "device_type"    : "virtual_keyboard",
+                        "value"          : "78",
+                        "value_type"     : "int",
+                        "keystroke_type" : "xxx"
+                    }));
+            });
 
-			document.getElementById("mouse-key-left").addEventListener("mousedown", (evt)=>{ 
-            	mouseKeyId=evt.target.id;  
-				originalX = evt.clientX;
-				originalY = evt.clientY;
-				document.getElementById(mouseKeyId).addEventListener('mousemove' , draggingMouseXY);  
-				document.getElementById(mouseKeyId).addEventListener("mouseleave", mouseRestoreEveryThing); 
-				document.getElementById(mouseKeyId).addEventListener("mouseup"   , mouseRestoreEveryThing); 
-				document.getElementById("mouse-key-middle").style.display = "none";
-				document.getElementById("mouse-key-right" ).style.display = "none"; 
-				
-				console.log(JSON.stringify({
-					"device_type" : "virtual_mouse"  , 
-					"device_id"   : device_id        ,
-					"key_type"    : "mouse-key-left",  
-					"value"       : 1                ,  
-					"mouse_event" : "click"          , 
-			  	}));   
-			}); 
+            function xyz_modifier(x) {
+                x = x + 128;
+                if (x>255) {
+                    return 255
+                } else if (x<0) {
+                    return 0
+                } else {
+                    return Math.floor(x)
+                }
+            }
 
-			document.getElementById("mouse-itself").addEventListener("mousedown", (evt)=>{ 
-            	mouseKeyId="mouse-as-whole";
-				originalX = evt.clientX;
-				originalY = evt.clientY;
-				document.getElementById("mouse-itself").addEventListener('mousemove', draggingMouseXY);  
-				document.getElementById("mouse-itself").addEventListener("mouseleave", mouseRestoreEveryThing); 
-				document.getElementById("mouse-itself").addEventListener("mouseup", mouseRestoreEveryThing); 
-				socket.send(JSON.stringify({ 
-					"device_type": "virtual_mouse",
-					"key_type"   : mouseKeyId     ,
-					"mouse_event": "mousedown"    , 
-					"value"      : 1              ,  
-			  	}));
-			});
-			
-			function draggingMouseZ (evt) {   
-				dy = evt.clientY-originalY;
-				evt.target.transform.baseVal.getItem(0).setTranslate(0, dy); 
-				reportMouseEvent = JSON.stringify({ 
-					"device_type": "virtual_mouse",
-					"key_type": mouseKeyId, 
-					"mouse_event":"mousemove",
-					"dx": 128, "dy": 128, "dz": xyz_modifier(dy), 
-			  	}) ; 
-				if (reportMouseEventTimerId==0) {
-					reportMouseEventTimerId = setInterval(()=>{socket.send(reportMouseEvent);}, reportMouseEventInterval);
-				} 
-			} 
+            function draggingMouseXY (evt) {
+                dx = evt.clientX-originalX,
+                dy = evt.clientY-originalY;
+                document.getElementById(mouseKeyId).transform.baseVal.getItem(0).setTranslate(dx,dy);
+                reportMouseEvent = JSON.stringify({
+                    "device_type": "virtual_mouse",
+                    "device_id"  : device_id      ,
+                    "key_type"   : mouseKeyId,
+                    "mouse_event": "mousemove",
+                    "dx": xyz_modifier(dx), "dy": xyz_modifier(dy), "dz": 128,
+                });
+                if (reportMouseEventTimerId==0) {
+                    reportMouseEventTimerId = setInterval(()=>{socket.send(reportMouseEvent);}, reportMouseEventInterval);
+                }
+            }
 
-			document.getElementById("mouse-key-middle").addEventListener("mousedown", (evt)=>{   
-				mouseKeyId = evt.target.id; 
-				originalY  = evt.clientY;
-				document.getElementById(mouseKeyId).addEventListener('mousemove' , draggingMouseZ);  
-				document.getElementById(mouseKeyId).addEventListener("mouseleave", mouseRestoreEveryThing); 
-				document.getElementById(mouseKeyId).addEventListener("mouseup"   , mouseRestoreEveryThing); 
-				document.getElementById("mouse-key-left" ).style.display = "none";
-				document.getElementById("mouse-key-right").style.display = "none"; 
-				socket.send(JSON.stringify({ 
-					"device_type": "virtual_mouse",
-					"device_id"  : device_id      ,
-					"key_type"   : mouseKeyId,
-					"mouse_event": "mousedown", 
-					"value"      : 4         , 
-			  	}));   
-			}); 
+            document.getElementById("mouse-key-left").addEventListener("mousedown", (evt)=>{
+                mouseKeyId=evt.target.id;
+                originalX = evt.clientX;
+                originalY = evt.clientY;
+                document.getElementById(mouseKeyId).addEventListener('mousemove' , draggingMouseXY);
+                document.getElementById(mouseKeyId).addEventListener("mouseleave", mouseRestoreEveryThing);
+                document.getElementById(mouseKeyId).addEventListener("mouseup"   , mouseRestoreEveryThing);
+                document.getElementById("mouse-key-middle").style.display = "none";
+                document.getElementById("mouse-key-right" ).style.display = "none";
 
-			function mouseRestoreEveryThing() { 
-				console.log(reportMouseEventTimerId);
-				document.getElementById("mouse-key-left"  ).style.display = "initial";
-				document.getElementById("mouse-key-middle").style.display = "initial";
-				document.getElementById("mouse-key-right" ).style.display = "initial"; 
-				clearInterval(reportMouseEventTimerId);
-				dx=0, dy=0, reportMouseEventTimerId=0;
-				var value=0;
-				if (mouseKeyId=="mouse-key-left") {
-					document.getElementById(mouseKeyId).removeEventListener('mousemove' , draggingMouseXY); 
-					document.getElementById(mouseKeyId).removeEventListener("mouseleave", mouseRestoreEveryThing); 
-					document.getElementById(mouseKeyId).removeEventListener("mouseup"   , mouseRestoreEveryThing);   
-					document.getElementById(mouseKeyId).transform.baseVal.getItem(0).setTranslate(0,0);  
-					mouseKeyId = null; 
-					return ; 
-				} else if (mouseKeyId=="mouse-key-middle") {
-					document.getElementById(mouseKeyId).removeEventListener("mousemove" , draggingMouseZ);  
-					document.getElementById(mouseKeyId).removeEventListener("mouseleave", mouseRestoreEveryThing); 
-					document.getElementById(mouseKeyId).removeEventListener("mouseup"   , mouseRestoreEveryThing);   
-					value=4;
-				} else if (mouseKeyId=="mouse-as-whole") { 
-					document.getElementById("mouse-itself").removeEventListener('mousemove', draggingMouseXY); 
-					document.getElementById("mouse-itself").removeEventListener("mouseleave", mouseRestoreEveryThing); 
-					document.getElementById("mouse-itself").removeEventListener("mouseup", mouseRestoreEveryThing); 
-					value=1;
-				}
-				document.getElementById(mouseKeyId).transform.baseVal.getItem(0).setTranslate(0,0); 
-				socket.send(JSON.stringify({ 
-					"device_type" : "virtual_mouse",
-					"device_id"   : device_id      ,
-					"key_type"    : mouseKeyId     , 
-					"mouse_event" : "mouseup"      ,
-					"value"       : value          , 
-			  	}));  
-				mouseKeyId = null; 
-			}
-			// if (evt.touches) { evt = evt.touches[0]; }
-			//addEventListener('touchstart', startDrag);
-			//addEventListener('touchmove', drag);
-			//addEventListener('touchend', endDrag);
-			//addEventListener('touchleave', endDrag);
-			//addEventListener('touchcancel', endDrag);
-		</script>
-		  
-		  
-		<script> 
-			var case_lock=false, shift_lock=false;  
+                console.log(JSON.stringify({
+                    "device_type" : "virtual_mouse"  ,
+                    "device_id"   : device_id        ,
+                    "key_type"    : "mouse-key-left",
+                    "value"       : 1                ,
+                    "mouse_event" : "click"          ,
+                }));
+            });
 
-			function function_caps_key() { 
+            document.getElementById("mouse-itself").addEventListener("mousedown", (evt)=>{
+                mouseKeyId="mouse-as-whole";
+                originalX = evt.clientX;
+                originalY = evt.clientY;
+                document.getElementById("mouse-itself").addEventListener('mousemove', draggingMouseXY);
+                document.getElementById("mouse-itself").addEventListener("mouseleave", mouseRestoreEveryThing);
+                document.getElementById("mouse-itself").addEventListener("mouseup", mouseRestoreEveryThing);
+                socket.send(JSON.stringify({
+                    "device_type": "virtual_mouse",
+                    "key_type"   : mouseKeyId     ,
+                    "mouse_event": "mousedown"    ,
+                    "value"      : 1              ,
+                }));
+            });
+
+            function draggingMouseZ (evt) {
+                dy = evt.clientY-originalY;
+                evt.target.transform.baseVal.getItem(0).setTranslate(0, dy);
+                reportMouseEvent = JSON.stringify({
+                    "device_type": "virtual_mouse",
+                    "key_type": mouseKeyId,
+                    "mouse_event":"mousemove",
+                    "dx": 128, "dy": 128, "dz": xyz_modifier(dy),
+                }) ;
+                if (reportMouseEventTimerId==0) {
+                    reportMouseEventTimerId = setInterval(()=>{socket.send(reportMouseEvent);}, reportMouseEventInterval);
+                }
+            }
+
+            document.getElementById("mouse-key-middle").addEventListener("mousedown", (evt)=>{
+                mouseKeyId = evt.target.id;
+                originalY  = evt.clientY;
+                document.getElementById(mouseKeyId).addEventListener('mousemove' , draggingMouseZ);
+                document.getElementById(mouseKeyId).addEventListener("mouseleave", mouseRestoreEveryThing);
+                document.getElementById(mouseKeyId).addEventListener("mouseup"   , mouseRestoreEveryThing);
+                document.getElementById("mouse-key-left" ).style.display = "none";
+                document.getElementById("mouse-key-right").style.display = "none";
+                socket.send(JSON.stringify({
+                    "device_type": "virtual_mouse",
+                    "device_id"  : device_id      ,
+                    "key_type"   : mouseKeyId,
+                    "mouse_event": "mousedown",
+                    "value"      : 4         ,
+                }));
+            });
+
+            function mouseRestoreEveryThing() {
+                console.log(reportMouseEventTimerId);
+                document.getElementById("mouse-key-left"  ).style.display = "initial";
+                document.getElementById("mouse-key-middle").style.display = "initial";
+                document.getElementById("mouse-key-right" ).style.display = "initial";
+                clearInterval(reportMouseEventTimerId);
+                dx=0, dy=0, reportMouseEventTimerId=0;
+                var value=0;
+                if (mouseKeyId=="mouse-key-left") {
+                    document.getElementById(mouseKeyId).removeEventListener('mousemove' , draggingMouseXY);
+                    document.getElementById(mouseKeyId).removeEventListener("mouseleave", mouseRestoreEveryThing);
+                    document.getElementById(mouseKeyId).removeEventListener("mouseup"   , mouseRestoreEveryThing);
+                    document.getElementById(mouseKeyId).transform.baseVal.getItem(0).setTranslate(0,0);
+                    mouseKeyId = null;
+                    return ;
+                } else if (mouseKeyId=="mouse-key-middle") {
+                    document.getElementById(mouseKeyId).removeEventListener("mousemove" , draggingMouseZ);
+                    document.getElementById(mouseKeyId).removeEventListener("mouseleave", mouseRestoreEveryThing);
+                    document.getElementById(mouseKeyId).removeEventListener("mouseup"   , mouseRestoreEveryThing);
+                    value=4;
+                } else if (mouseKeyId=="mouse-as-whole") {
+                    document.getElementById("mouse-itself").removeEventListener('mousemove', draggingMouseXY);
+                    document.getElementById("mouse-itself").removeEventListener("mouseleave", mouseRestoreEveryThing);
+                    document.getElementById("mouse-itself").removeEventListener("mouseup", mouseRestoreEveryThing);
+                    value=1;
+                }
+                document.getElementById(mouseKeyId).transform.baseVal.getItem(0).setTranslate(0,0);
+                socket.send(JSON.stringify({
+                    "device_type" : "virtual_mouse",
+                    "device_id"   : device_id      ,
+                    "key_type"    : mouseKeyId     ,
+                    "mouse_event" : "mouseup"      ,
+                    "value"       : value          ,
+                }));
+                mouseKeyId = null;
+            }
+            // if (evt.touches) { evt = evt.touches[0]; }
+            //addEventListener('touchstart', startDrag);
+            //addEventListener('touchmove', drag);
+            //addEventListener('touchend', endDrag);
+            //addEventListener('touchleave', endDrag);
+            //addEventListener('touchcancel', endDrag);
+        </script>
+
+
+        <script>
+            var case_lock=false, shift_lock=false;
+
+            function function_caps_key() {
                 document.querySelectorAll('.letter-display').forEach(ele => {
-					if (case_lock) {
-						ele.innerHTML = ele.innerHTML.toLowerCase();
-					} else {
-						ele.innerHTML = ele.innerHTML.toUpperCase();
-					} 
-                });   
+                    if (case_lock) {
+                        ele.innerHTML = ele.innerHTML.toLowerCase();
+                    } else {
+                        ele.innerHTML = ele.innerHTML.toUpperCase();
+                    }
+                });
                 case_lock = !case_lock;
             };
 
-            //encodeURIComponent(String.fromCharCode(code)) 
-            function func_shift_key() { 
+            //encodeURIComponent(String.fromCharCode(code))
+            function func_shift_key() {
                 document.querySelectorAll('.letter-display').forEach(ele => {
-					if (case_lock) {
-						ele.innerHTML = ele.innerHTML.toLowerCase();
-					} else {
-						ele.innerHTML = ele.innerHTML.toUpperCase();
-					} 
+                    if (case_lock) {
+                        ele.innerHTML = ele.innerHTML.toLowerCase();
+                    } else {
+                        ele.innerHTML = ele.innerHTML.toUpperCase();
+                    }
                 });
                 document.querySelectorAll('.shift-display-grey,.shift-display-white').forEach(ele => {
-					if (ele.className == "shift-display-grey") {
-                    	ele.className = "shift-display-white"; 
-					} else {
-                    	ele.className = "shift-display-grey"; 
-					}
-                }); 
-                case_lock = !case_lock; 
-            } 
-			
-			var username = "hello";
-    		var password = "iloveyou";
-    		var hostname = "guoxiaokang.com";
-    		var hostname = "192.168.12.223";
-			//let socket = new WebSocket("wss://"+username+":"+password+"@"+hostname+":8765"); // ws://guoxiaokang:8765
-			let socket = new WebSocket("ws://"+username+":"+password+"@"+hostname+":8765"); // ws://guoxiaokang:8765 
-			socket.onopen = function(e) {
-				socket.send(JSON.stringify({ 
-					"msg_type"   : "ready",
-					"device_type": "virtual_keyboard", 
-				}));
-			};
-			socket.onclose = function(event) {
-			  if (event.wasClean) {
-			    //alert(`[ws closed] Connection closed cleanly, code=${event.code} reason=${event.reason}`);
-			  } else {
-			    // e.g. server process killed or network down event.code is usually 1006 in this case
-			    //alert('[ws closed] Connection died');
-			  }
-			};
-			socket.onerror = function(error) {
-			  //alert(`[error] ${error.message}`);
-			};
-			var msg, device_id=0;
-			socket.onmessage = function(event) { 
-				msg = JSON.parse(event.data);  
-				if (msg["msg_type"]=="init") {
-					device_id = msg["device_id"] ; 
-					//alert(msg["msg"]);
-					// console.log("[Init]", msg["device_id"]) 
-				} else if (msg["msg_type"]=="alert") { 
-					if (device_id == msg["device_id"]) {
-						; // console.log("[alert]", event.data) 
-					} else {
-						console.log("[Alert]", event.data)
-						//alert(msg["msg"]);  
-					}
-				} else {
-					console.log("[Broadcast]", event.data, device_id)
-				}
-				
-			};
-            document.querySelectorAll('.key').forEach(ele => {
-                ele.addEventListener("click", ()=> { 
-					//console.log(ele.firstElementChild.className);//
-					var keystroke_type = "write";
-					switch(ele.id) {
-						case "key-num-lock":
-							if (ele.firstElementChild.className == "num-lock-void") {
-								ele.firstElementChild.className = "num-lock-box";
-							} else {
-								ele.firstElementChild.className = "num-lock-void";
-							} 
-							break;
-						case "key-shift-left":
-							func_shift_key();
-						case "key-alt-left"  :
-						case "key-ctrl-left" :
-							if (ele.firstElementChild.className == "align-left-margin") {
-								ele.firstElementChild.className = "align-left-margin-box";
-								keystroke_type = "press";
-							} else {
-								ele.firstElementChild.className = "align-left-margin";
-								keystroke_type = "release";
-							}
-							break;
-						case "key-caps-lock" :
-							function_caps_key();
-							if (ele.firstElementChild.className == "align-left-margin") {
-								ele.firstElementChild.className = "align-left-margin-box";
-							} else {
-								ele.firstElementChild.className = "align-left-margin";
-							}
-							break;
-						case "key-shift-right":
-							func_shift_key();
-						case "key-alt-right"  :
-						case "key-ctrl-right" :
-							if (ele.firstElementChild.className == "align-right-margin") {
-								ele.firstElementChild.className = "align-right-margin-box";
-								keystroke_type = "press";
-							} else {
-								ele.firstElementChild.className = "align-right-margin";
-								keystroke_type = "release";
-							}
-							break;
-						default:
-							;// code block
-					}
-                    console.log(ele.getAttribute("value"), ele.getAttribute("value_type"));
-					socket.send(JSON.stringify({  
-						"device_type"    : "virtual_keyboard",
-						"value"          : ele.getAttribute("value"),
-						"value_type"     : ele.getAttribute("value_type"),
-						"keystroke_type" : keystroke_type
-					}));
+                    if (ele.className == "shift-display-grey") {
+                        ele.className = "shift-display-white";
+                    } else {
+                        ele.className = "shift-display-grey";
+                    }
                 });
-            }); 
+                case_lock = !case_lock;
+            }
+
+            var username = "hello";
+            var password = "iloveyou";
+            var hostname = "guoxiaokang.com";
+            var hostname = "192.168.12.238";
+            //let socket = new WebSocket("wss://"+username+":"+password+"@"+hostname+":8765"); // ws://guoxiaokang:8765
+            let socket = new WebSocket("ws://"+username+":"+password+"@"+hostname+":8765"); // ws://guoxiaokang:8765
+            socket.onopen = function(e) {
+                socket.send(JSON.stringify({
+                    "msg_type"   : "ready",
+                    "device_type": "virtual_keyboard",
+                }));
+            };
+            socket.onclose = function(event) {
+              if (event.wasClean) {
+                //alert(`[ws closed] Connection closed cleanly, code=${event.code} reason=${event.reason}`);
+              } else {
+                // e.g. server process killed or network down event.code is usually 1006 in this case
+                //alert('[ws closed] Connection died');
+              }
+            };
+            socket.onerror = function(error) {
+              //alert(`[error] ${error.message}`);
+            };
+            var msg, device_id=0;
+            socket.onmessage = function(event) {
+                msg = JSON.parse(event.data);
+                if (msg["msg_type"]=="init") {
+                    device_id = msg["device_id"] ;
+                    //alert(msg["msg"]);
+                    // console.log("[Init]", msg["device_id"])
+                } else if (msg["msg_type"]=="alert") {
+                    if (device_id == msg["device_id"]) {
+                        ; // console.log("[alert]", event.data)
+                    } else {
+                        console.log("[Alert]", event.data)
+                        //alert(msg["msg"]);
+                    }
+                } else {
+                    console.log("[Broadcast]", event.data, device_id)
+                }
+
+            };
+            document.querySelectorAll('.key').forEach(ele => {
+                ele.addEventListener("click", ()=> {
+                    //console.log(ele.firstElementChild.className);//
+                    var keystroke_type = "write";
+                    switch(ele.id) {
+                        case "key-num-lock":
+                            if (ele.firstElementChild.className == "num-lock-void") {
+                                ele.firstElementChild.className = "num-lock-box";
+                            } else {
+                                ele.firstElementChild.className = "num-lock-void";
+                            }
+                            break;
+                        case "key-shift-left":
+                            func_shift_key();
+                        case "key-alt-left"  :
+                        case "key-ctrl-left" :
+                            if (ele.firstElementChild.className == "align-left-margin") {
+                                ele.firstElementChild.className = "align-left-margin-box";
+                                keystroke_type = "press";
+                            } else {
+                                ele.firstElementChild.className = "align-left-margin";
+                                keystroke_type = "release";
+                            }
+                            break;
+                        case "key-caps-lock" :
+                            function_caps_key();
+                            if (ele.firstElementChild.className == "align-left-margin") {
+                                ele.firstElementChild.className = "align-left-margin-box";
+                            } else {
+                                ele.firstElementChild.className = "align-left-margin";
+                            }
+                            break;
+                        case "key-shift-right":
+                            func_shift_key();
+                        case "key-alt-right"  :
+                        case "key-ctrl-right" :
+                            if (ele.firstElementChild.className == "align-right-margin") {
+                                ele.firstElementChild.className = "align-right-margin-box";
+                                keystroke_type = "press";
+                            } else {
+                                ele.firstElementChild.className = "align-right-margin";
+                                keystroke_type = "release";
+                            }
+                            break;
+                        default:
+                            ;// code block
+                    }
+                    console.log(ele.getAttribute("value"), ele.getAttribute("value_type"));
+                    socket.send(JSON.stringify({
+                        "device_type"    : "virtual_keyboard",
+                        "value"          : ele.getAttribute("value"),
+                        "value_type"     : ele.getAttribute("value_type"),
+                        "keystroke_type" : keystroke_type
+                    }));
+                });
+            });
         </script>
     </body>
 </html>
