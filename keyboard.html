@@ -845,9 +845,9 @@
             var username = "hello";
             var password = "iloveyou";
             var hostname = "guoxiaokang.com";
-            var hostname = "192.168.12.238";
-            //let socket = new WebSocket("wss://"+username+":"+password+"@"+hostname+":8765"); // ws://guoxiaokang:8765
-            let socket = new WebSocket("ws://"+username+":"+password+"@"+hostname+":8765"); // ws://guoxiaokang:8765
+            //var hostname = "192.168.12.238";
+            //let socket = new WebSocket("ws://"+username+":"+password+"@"+hostname+":8765"); // ws://guoxiaokang:8765
+            let socket = new WebSocket("wss://"+username+":"+password+"@"+hostname+":8765"); // ws://guoxiaokang:8765
             socket.onopen = function(e) {
                 socket.send(JSON.stringify({
                     "msg_type"   : "ready",
