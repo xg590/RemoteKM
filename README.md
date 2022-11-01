@@ -5,7 +5,7 @@
 ### The Gadget 
 <table>
   <tr>
-    <th style="width:350px">A Seeed Studio Xiao (SAMD21) and Raspberry Pi Zero Wireless (Pi ZW) couple.</th>
+    <th style="width:350px">The couple of Seeed Studio Xiao (SAMD21) and </br>Raspberry Pi Zero Wireless (Pi ZW) couple.</th>
     <th>My parents' PC will power the couple.</th> 
   </tr>
   <tr>
@@ -30,7 +30,7 @@
 * I control the Pi through a virtual keyboard webpage, Pi controls the Xiao via I2C protocol, and Xiao emulates an HID combo of keyboard and mouse.
 * A websocket server is establised to broadcast keystrokes collected from the web browser (one websocket client) to the Pi (another websocket client).
 ### Usage
-* Flash [remoteKM.ino](remoteKM.ino) to Xiao.
+* Wire the Xiao to Pi and flash [remoteKM.ino](remoteKM.ino) to Xiao.
 ```
 arduino-cli core update-index               --additional-urls https://files.seeedstudio.com/arduino/package_seeeduino_boards_index.json
 arduino-cli core install seeeduino:samd     --additional-urls https://files.seeedstudio.com/arduino/package_seeeduino_boards_index.json
@@ -38,7 +38,14 @@ arduino-cli lib install Keyboard
 arduino-cli lib install Mouse
 arduino-cli compile . --fqbn   Seeeduino:samd:seeed_XIAO_m0 && arduino-cli upload . --fqbn   Seeeduino:samd:seeed_XIAO_m0 -p /dev/ttyACM0
 ```
-* Wire the Xiao to Pi, run [client.ipynb](client.ipynb) on Pi, run [server.ipynb](server.ipynb) somewhere, open the [keyboard.html](keyboard.html) in a web browser.
+* Run [server.py](server.py) on server (Don't forget <i>Let's Encrypt</i>), run [real_keyboard.py](real_keyboard.py) on Pi, and open the [keyboard.html](keyboard.html) in a web browser.
+```
+wget https://raw.githubusercontent.com/xg590/remoteKM/v2.1/server.py
+python3 server.py
+wget https://raw.githubusercontent.com/xg590/remoteKM/v2.1/real_keyboard.py
+python3 real_keyboard.py
+wget https://raw.githubusercontent.com/xg590/remoteKM/v2.1/keyboard.html
+```
 ### Misc
 * Find Keyboard Map @ ~/Arduino/libraries/Keyboard/src/[Keyboard.h](misc/Keyboard.h)
 * Find Mouse    Map @ ~/Arduino/libraries/Mouse/src/[Mouse.h](misc/Mouse.h)
