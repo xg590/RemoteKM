@@ -38,13 +38,13 @@ arduino-cli lib install Keyboard
 arduino-cli lib install Mouse
 arduino-cli compile . --fqbn   Seeeduino:samd:seeed_XIAO_m0 && arduino-cli upload . --fqbn   Seeeduino:samd:seeed_XIAO_m0 -p /dev/ttyACM0
 ```
-* Run [server.py](server.py) on server (Don't forget <i>Let's Encrypt</i>), run [real_keyboard.py](real_keyboard.py) on Pi, and open the [keyboard.html](keyboard.html) in a web browser.
+* Run [server.py](server.py) on server (Don't forget <i>Let's Encrypt</i>), run [real_keyboard.py](real_keyboard.py) on Pi, and open the [virtual_keyboard.html](virtual_keyboard.html) in any web browser.
 ```
 wget https://raw.githubusercontent.com/xg590/remoteKM/v2.1/server.py
 python3 server.py
 wget https://raw.githubusercontent.com/xg590/remoteKM/v2.1/real_keyboard.py
 python3 real_keyboard.py
-wget https://raw.githubusercontent.com/xg590/remoteKM/v2.1/keyboard.html
+wget https://raw.githubusercontent.com/xg590/remoteKM/v2.1/virtual_keyboard.html
 ```
 ### Misc
 * Find Keyboard Map @ ~/Arduino/libraries/Keyboard/src/[Keyboard.h](misc/Keyboard.h)
