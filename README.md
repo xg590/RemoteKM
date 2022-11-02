@@ -37,6 +37,8 @@ arduino-cli core update-index               --additional-urls https://files.seee
 arduino-cli core install seeeduino:samd     --additional-urls https://files.seeedstudio.com/arduino/package_seeeduino_boards_index.json
 arduino-cli lib install Keyboard
 arduino-cli lib install Mouse
+mkdir remoteKM ; cd remoteKM
+wget wget https://raw.githubusercontent.com/xg590/remoteKM/v2.1/remoteKM.ino
 arduino-cli compile . --fqbn   Seeeduino:samd:seeed_XIAO_m0 && arduino-cli upload . --fqbn   Seeeduino:samd:seeed_XIAO_m0 -p /dev/ttyACM0
 ```
 * Run [server.py](server.py) on server (Don't forget <i>Let's Encrypt</i>), run [real_keyboard.py](real_keyboard.py) on Pi, and open the [virtual_keyboard.html](virtual_keyboard.html) in any web browser.
