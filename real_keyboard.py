@@ -27,6 +27,8 @@ async def main():
                         device_id = msg['device_id']
                     elif msg["msg_type"] == "alert":
                         pass
+                    elif msg["msg_type"] == "reset_real_keyboard": 
+                        bus.i2c_rdwr(i2c_msg.write(0x34, [ord('r'), 0, 0, 0, 0])) # reset xiao 
                     print(msg)
                 elif "device_type" in msg:
                     if msg["device_type"] == "virtual_keyboard":

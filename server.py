@@ -26,7 +26,10 @@ async def broadcast_handler(ws_conn):
             msg_json = json.loads(msg_str)
             if "msg_type" in msg_json and msg_json["msg_type"]=="ready":
                 client_type = msg_json["device_type"]
-                msg_json = {"msg_type":"alert", "device_id": device_id, "msg":f"A new {client_type} is online"}
+                if client_type == "virtual_keyboard":
+                    msg_json = {"msg_type":"reset_real_keyboard"}
+                else:
+                    msg_json = {"msg_type":"alert", "device_id": device_id, "msg":f"A new {client_type} is online"}
                 websockets.broadcast(ws_conns, json.dumps(msg_json))
             else:
                 websockets.broadcast(ws_conns, msg_str)

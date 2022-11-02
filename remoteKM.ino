@@ -14,7 +14,6 @@ void receiveEvent(int howMany)
 
   char str[64];
   sprintf(str, "[Raw] %d,%d,%d,%d,%d", buf[0],buf[1],buf[2],buf[3],buf[4]);
-  Serial.println(str);
   // buf = ['k', 'p', 'q', '', ''] means key "q" on keyboard will be pressed
   if (buf[0]=='k') {
     switch(buf[1]) {
@@ -47,6 +46,8 @@ void receiveEvent(int howMany)
       default:
         return ;
     }
+  } else if (buf[0]=='r') { 
+    NVIC_SystemReset(); // reset the microcontroller
   } else {
     return ;
   }
@@ -57,6 +58,8 @@ void setup()
   Serial.begin(115200);
   Wire.begin(0x34);             // join i2c bus with address #4
   Wire.onReceive(receiveEvent); // register event
+  Keyboard.begin();
+  Mouse.begin();
 }
 
 void loop() {}

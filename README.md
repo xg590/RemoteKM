@@ -2,6 +2,7 @@
 * I want control my parent's computer via the internet so I can re-install MS Windows for them.
 * They do not have an IPMI-enabled motherboard, so I need to make a remotely controlled gadget that emulates the keyboard and mouse.
 * I have tested this gadget and used it in a Linux OS installation.
+* I also used it to control my Android phone.
 ### The Gadget 
 <table>
   <tr>
